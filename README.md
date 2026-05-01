@@ -4,8 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
   <title>Ashawniz Nailz | South Carolina Nail Tech</title>
-  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, and mobile services in Florence, SC area." />
+  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, and mobile services in Florence, SC area. Book directly via Google Calendar." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <!-- Google Calendar Appointment Scheduling styles & script -->
+  <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+  <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <style>
     * {
       margin: 0;
@@ -27,7 +30,6 @@
       --shadow-soft: 0 18px 40px rgba(255, 179, 230, 0.3);
       --radius-lg: 28px;
       --radius-pill: 999px;
-      --radius-form: 24px;
     }
 
     body {
@@ -313,116 +315,85 @@
     }
     .hero-meta { font-size: 0.72rem; opacity: 0.85; }
 
-    /* ========== BOOKING CARD - GRADIENT FORM FIELDS ========== */
+    /* ========== BOOKING CARD - DIRECT CALENDAR ONLY ========== */
     .booking-card {
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(18px);
       border-radius: 36px;
-      padding: 1.6rem;
+      padding: 1.8rem;
       box-shadow: 0 25px 45px rgba(255, 179, 230, 0.35);
       border: 2px solid rgba(255, 255, 255, 0.9);
       transition: all 0.3s ease;
-    }
-    .booking-header { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.5rem; }
-    .booking-sub { font-size: 0.74rem; color: var(--text-light); margin-bottom: 1.2rem; padding-bottom: 0.5rem; border-bottom: 1px solid rgba(255, 179, 230, 0.4); }
-    
-    .form-group { margin-bottom: 1rem; }
-    .form-group label {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 0.35rem;
-      color: var(--text-dark);
-    }
-    .form-group input, 
-    .form-group select, 
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8rem 1rem;
-      border-radius: 28px !important;
-      border: none;
-      background: linear-gradient(135deg, #fff0f8, #fae6ff);
-      font-family: "Poppins", sans-serif;
-      font-size: 0.85rem;
-      color: var(--text-dark);
-      transition: all 0.25s ease;
-      box-shadow: inset 0 1px 2px rgba(0,0,0,0.02), 0 2px 6px rgba(255, 179, 230, 0.2);
-      outline: none;
-    }
-    .form-group input:focus, 
-    .form-group select:focus, 
-    .form-group textarea:focus {
-      background: linear-gradient(135deg, #ffffff, #ffeef9);
-      box-shadow: 0 0 0 3px rgba(217, 179, 255, 0.4);
-      transform: scale(1.01);
-    }
-    .form-row { display: grid; grid-template-columns: 1fr; gap: 0.8rem; }
-    @media (min-width: 600px) {
-      .form-row { grid-template-columns: 1fr 1fr; gap: 1rem; }
-    }
-    
-    .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      margin-top: 0.3rem;
-    }
-    .checkbox-item {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, #fff5fc, #fdeaff);
-      padding: 0.45rem 1rem;
-      border-radius: 40px;
-      border: 1px solid rgba(255, 179, 230, 0.6);
-      font-size: 0.75rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-    }
-    .checkbox-item:hover { background: linear-gradient(135deg, #ffeef8, #ffe0ff); transform: translateY(-1px); }
-    .checkbox-item input { width: 17px; height: 17px; accent-color: var(--purple-dark); margin: 0; cursor: pointer; }
-    
-    .file-upload input { padding: 0.7rem 1rem; }
-    .booking-note {
-      font-size: 0.7rem;
-      background: linear-gradient(135deg, rgba(255, 230, 245, 0.8), rgba(230, 210, 255, 0.8));
-      padding: 0.8rem;
-      border-radius: 28px;
       text-align: center;
+    }
+    .booking-header { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+    .booking-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    
+    /* Google Calendar Button Styling */
+    .calendar-button-container {
       margin: 1rem 0;
-      border: 1px solid rgba(255,255,255,0.6);
+      display: flex;
+      justify-content: center;
     }
-    .submit-btn {
-      width: 100%;
-      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
-      padding: 0.9rem;
-      border: none;
-      border-radius: 60px;
-      font-weight: 800;
-      font-size: 0.85rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      color: var(--text-dark);
-      box-shadow: 0 8px 20px rgba(255, 179, 230, 0.4);
-    }
-    .submit-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(255, 179, 230, 0.6); }
-    .social-pill {
+    .calendar-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      background: rgba(255,255,255,0.85);
-      padding: 0.5rem 1.2rem;
+      justify-content: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #039BE5, #0288d1);
+      color: white;
+      padding: 0.9rem 2rem;
       border-radius: 60px;
-      font-size: 0.72rem;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      box-shadow: 0 6px 18px rgba(3,155,229,0.4);
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      max-width: 320px;
+      text-align: center;
+    }
+    .calendar-link:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(3,155,229,0.5);
+      background: linear-gradient(135deg, #0288d1, #0277bd);
+    }
+    
+    /* Alternative booking options */
+    .alt-booking {
+      margin-top: 1.8rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255, 179, 230, 0.4);
+    }
+    .alt-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 0.8rem;
+    }
+    .social-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .social-book-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.85);
+      padding: 0.6rem 1.3rem;
+      border-radius: 60px;
+      font-size: 0.75rem;
       font-weight: 600;
       transition: 0.2s;
+      border: 1px solid rgba(255, 179, 230, 0.6);
     }
-    .social-pill:hover { transform: translateY(-2px); background: white; box-shadow: 0 5px 12px rgba(255,179,230,0.4); }
+    .social-book-btn:hover { transform: translateY(-2px); background: white; box-shadow: 0 5px 12px rgba(255,179,230,0.4); }
     
     /* ========== SECTIONS - FULLY RESPONSIVE GRIDS ========== */
     section { padding: 2.5rem 0; }
@@ -473,42 +444,6 @@
       border: 1px solid rgba(255,255,255,0.7);
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
-    }
-    
-    /* Travel Fees specific card */
-    .travel-grid {
-      display: grid;
-      gap: 1.3rem;
-      grid-template-columns: 1fr;
-    }
-    @media (min-width: 768px) {
-      .travel-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (min-width: 1024px) {
-      .travel-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-    .travel-location-list {
-      margin-top: 0.8rem;
-      list-style: none;
-      padding-left: 0;
-    }
-    .travel-location-list li {
-      font-size: 0.8rem;
-      padding: 0.2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      border-bottom: 1px dashed rgba(255,179,230,0.5);
-    }
-    .travel-location-list li:last-child { border-bottom: none; }
-    .travel-note {
-      background: linear-gradient(135deg, rgba(255, 220, 245, 0.9), rgba(230, 200, 255, 0.9));
-      border-radius: 24px;
-      padding: 0.8rem 1rem;
-      font-size: 0.75rem;
-      text-align: center;
-      font-weight: 500;
-      margin-top: 0.8rem;
     }
     
     /* GALLERY */
@@ -580,6 +515,16 @@
       .footer-top { flex-direction: column; align-items: flex-start; }
       .footer-bottom { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
     }
+    
+    /* Deposit note styling */
+    .deposit-note {
+      background: linear-gradient(135deg, rgba(255, 230, 245, 0.7), rgba(230, 210, 255, 0.7));
+      padding: 0.6rem;
+      border-radius: 28px;
+      font-size: 0.7rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -598,7 +543,7 @@
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#policies">Policies</a>
-          <a href="#travel-fees">Travel Fees</a>
+          <a href="#location">Location</a>
           <a href="#gallery">Gallery</a>
           <a href="#booking" class="nav-btn"><span>💅🏾</span><span>Book Now</span></a>
         </div>
@@ -619,141 +564,70 @@
             <div class="badge"><span class="badge-dot"></span> Travel nail tech · SC (fees apply)</div>
           </div>
           <div class="hero-actions">
-            <a class="btn-primary" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank"><span>📲</span><span>Book via DM</span></a>
+            <a class="btn-primary" href="#booking"><span>📅</span><span>Book Appointment</span></a>
             <a class="btn-secondary" href="#services"><span>👛</span><span>View price list</span></a>
           </div>
-          <div class="hero-meta">Send your nail inspo photo when booking so your set can be customized just for you.</div>
+          <div class="hero-meta">Click "Book Appointment" to schedule directly via Google Calendar. A $20 deposit is required to secure your booking.</div>
         </div>
 
-        <!-- BOOKING FORM -->
+        <!-- DIRECT BOOKING CARD - ONLY GOOGLE CALENDAR -->
         <div class="booking-card" id="booking">
-          <div class="booking-header"><span>📅</span><span>Request Appointment</span></div>
-          <div class="booking-sub">Fill out the form below. I'll reach out within 24 hours to confirm your date & time.</div>
-          <form action="https://forminit.com/f/rw0ekqq2y6e" method="POST" enctype="multipart/form-data">
-            <div class="form-row">
-              <div class="form-group"><label>Full Name *</label><input type="text" name="fi-sender-fullName" placeholder="First & last name" required></div>
-              <div class="form-group"><label>Email *</label><input type="email" name="fi-sender-email" placeholder="your@email.com" required></div>
+          <div class="booking-header"><span>📅</span><span>Book Direct Appointment</span></div>
+          <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
+          
+          <!-- Google Calendar Scheduling Button -->
+          <div class="calendar-button-container" id="google-calendar-btn">
+            <!-- Fallback content will be replaced by script -->
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="calendar-link">📅 Book Appointment</a>
+          </div>
+          
+          <script>
+            (function() {
+              var target = document.getElementById('google-calendar-btn');
+              if (target) {
+                // Check if calendar scheduling button is available
+                var checkCalendar = function() {
+                  if (window.calendar && window.calendar.schedulingButton) {
+                    // Clear fallback and load real button
+                    target.innerHTML = '';
+                    window.calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true',
+                      color: '#039BE5',
+                      label: '📅 Book Appointment',
+                      target: target,
+                    });
+                  } else {
+                    // Keep fallback but style it nicely
+                    target.innerHTML = '<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="calendar-link">📅 Book Appointment</a>';
+                  }
+                };
+                if (document.readyState === 'loading') {
+                  window.addEventListener('load', checkCalendar);
+                } else {
+                  checkCalendar();
+                }
+              }
+            })();
+          </script>
+          
+          <div class="deposit-note">
+            <strong>💎 $20 Deposit Required</strong> — Your deposit goes toward your total and secures your time slot.
+          </div>
+          
+          <div class="alt-booking">
+            <div class="alt-title">✨ Or book via social media ✨</div>
+            <div class="social-buttons">
+              <a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" class="social-book-btn">📲 TikTok DM</a>
+              <a href="https://instagram.com/ashawniz.nailz" target="_blank" class="social-book-btn">📸 Instagram DM</a>
             </div>
-            <div class="form-row">
-              <div class="form-group"><label>Instagram (optional)</label><input type="text" name="fi-text-instagram" placeholder="@username - so I can tag you!"></div>
-              <div class="form-group"><label>Preferred Date *</label><input type="date" name="fi-date-preferred" required><small style="font-size:0.6rem;">*request - I will confirm</small></div>
-            </div>
-            <div class="form-row">
-              <div class="form-group"><label>Preferred Time</label><input type="text" name="fi-text-time" placeholder="e.g., 2pm, afternoon"></div>
-              <div class="form-group"><label>Alternative Time</label><input type="text" name="fi-text-time-alt" placeholder="Alternative time (optional)"></div>
-            </div>
-
-            <div class="form-group"><label>Select Services (can choose multiple) *</label>
-              <div class="checkbox-group">
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Full Set Acrylic - $60"> Full Set Acrylic ($60)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Design Set - $75"> Acrylic Design ($75)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm Set - $75"> Acrylic Charm ($75)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Acrylic Charm/Design Set - $85"> Charm/Design Set ($85)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Basic Manicure - $45"> Basic Manicure ($45)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Classic Pedicure - $45"> Classic Pedicure ($45)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Deluxe Pedicure - $50"> Deluxe Pedicure ($50)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-service" value="Luxury Pedicure - $55"> Luxury Pedicure ($55)</label>
-              </div>
-            </div>
-
-            <div class="form-group"><label>Add-Ons (select any extras)</label>
-              <div class="checkbox-group">
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="2 Acrylic toes - $15"> 2 Acrylic toes (+$15)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Design full set - $35"> Design full set (+$35)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Charm full set - $35"> Charm full set (+$35)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Design/charm full set - $49"> Design/charm full set (+$49)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Polish change - $18"> Polish change (+$18)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Acrylic toes refill - $12"> Acrylic toes refill (+$12)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Acrylic nails refill - $42"> Acrylic nails refill (+$42)</label>
-                <label class="checkbox-item"><input type="checkbox" name="fi-checkbox-addons" value="Freestyle - $50"> Freestyle (+$50)</label>
-              </div>
-            </div>
-
-            <div class="form-group file-upload"><label>Inspo Photo (optional)</label><input type="file" name="fi-file-inspo" accept="image/*"><small style="font-size:0.6rem;">Upload a photo of your nail inspiration</small></div>
-            
-            <div class="form-group">
-              <label>Anything else? (design ideas, questions, etc.)</label>
-              <textarea name="fi-text-notes" placeholder="Add phone number here if you don't wanna communicate through Instagram or email. Also share design ideas, special requests, or any questions!" rows="3"></textarea>
-            </div>
-            
-            <div class="booking-note"><strong>📌 Important:</strong> Your preferred date is a request and may not be available. I will reach out to confirm your appointment and handle payment details. A $20 deposit is required to secure your booking.</div>
-            <button type="submit" class="submit-btn">Send Booking Request</button>
-          </form>
-          <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 0.8rem;">
-            <a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" class="social-pill">TikTok</a>
-            <a href="https://instagram.com/ashawniz.nailz" target="_blank" class="social-pill">Instagram</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2><p>Full glam acrylic sets or relaxing pedicures — everything with pink & purple energy.</p></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina (travel fees apply). Book via DM or form.</p></div></div></div></section>
+    <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2><p>Full glam acrylic sets or relaxing pedicures — everything with pink & purple energy.</p></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina (travel fees apply). Book via calendar or DM.</p></div></div></div></section>
 
     <section id="services"><div class="container"><div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div><div class="services-grid"><div class="card"><h3>Acrylic Sets & Manicures</h3><div class="price-item"><span class="price-title">Full Set Acrylic</span><span>$60</span></div><div class="price-item"><span class="price-title">Acrylic Design Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm/Design</span><span>$85</span></div><div class="price-item"><span class="price-title">Basic Manicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Design Manicure</span><span>$50</span></div></div><div class="card"><h3>Pedicure Menu</h3><div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div><div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div><p style="font-size:0.75rem; margin-top:0.5rem;">✨ Dry pedicure also available</p></div><div class="card"><h3>Add-Ons & Refills</h3><div class="price-item"><span>2 Acrylic toes</span><span>$15</span></div><div class="price-item"><span>Design full set</span><span>$35</span></div><div class="price-item"><span>Charm full set</span><span>$35</span></div><div class="price-item"><span>Acrylic nails refill</span><span>$42</span></div><div class="price-item"><span>Soak Off</span><span>$15</span></div><div class="price-item"><span>Deposit</span><span>$20</span></div></div></div></div></section>
-
-    <!-- TRAVEL FEES SECTION - CORRECTED SPELLING: Marion and Effingham -->
-    <section id="travel-fees">
-      <div class="container">
-        <div class="section-heading">
-          <span class="kicker">Mobile service</span>
-          <h2>Travel Fees</h2>
-          <p>Covering my travel & setup — ensures a full luxury experience. Fees are categorized per round-trip mileage.</p>
-        </div>
-        <div class="travel-grid">
-          <!-- 0-21 miles -->
-          <div class="card">
-            <div style="font-size:1.8rem; margin-bottom:0.3rem;">📍</div>
-            <h3>0-21 miles · $25</h3>
-            <ul class="travel-location-list">
-              <li>✨ Florence, SC</li>
-              <li>✨ Darlington, SC</li>
-              <li>✨ Timmonsville, SC</li>
-              <li>✨ Effingham, SC</li>
-            </ul>
-          </div>
-          <!-- 21-40 miles -->
-          <div class="card">
-            <div style="font-size:1.8rem; margin-bottom:0.3rem;">🚗</div>
-            <h3>21-40 miles · $45 - $50</h3>
-            <ul class="travel-location-list">
-              <li>📍 Hartsville, SC</li>
-              <li>📍 Lake City, SC</li>
-              <li>📍 Marion, SC</li>
-            </ul>
-          </div>
-          <!-- 41-60 miles -->
-          <div class="card">
-            <div style="font-size:1.8rem; margin-bottom:0.3rem;">⛽</div>
-            <h3>41-60 miles · $65 - $75</h3>
-            <div class="policy-tag" style="background:#fce4ff;">Longer trips - must be worth it</div>
-            <ul class="travel-location-list">
-              <li>🌟 Sumter, SC</li>
-              <li>🌟 Mullins, SC</li>
-              <li>🌟 Conway, SC</li>
-            </ul>
-          </div>
-          <!-- 61-80 miles (Far-premium) -->
-          <div class="card">
-            <div style="font-size:1.8rem; margin-bottom:0.3rem;">💎</div>
-            <h3>61-80 miles · $85+</h3>
-            <div class="policy-tag" style="background:#f5e6ff;">Far-premium only</div>
-            <ul class="travel-location-list">
-              <li>🏖️ Myrtle Beach, SC</li>
-              <li>🏛️ Columbia, SC</li>
-            </ul>
-            <div class="travel-note">⭐ Premium extended service — must be pre-approved</div>
-          </div>
-        </div>
-        <div class="card" style="margin-top:1rem; text-align:center;">
-          <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.8rem;">
-            <span class="policy-tag">💅🏾 Same day - $30 add ons</span>
-            <span class="policy-tag">👥 For the same house call: $10 off each service!!</span>
-          </div>
-          <p style="margin-top:0.8rem; font-weight:500; font-size:0.85rem;"><strong>📌 Important:</strong> All house calls have to have a $120 minimum to cover my travel and setup. This ensures you get a full luxury experience!!</p>
-          <div style="margin-top:0.7rem; font-size:0.7rem; background:rgba(255,230,250,0.7); border-radius:40px; padding:0.4rem 0.8rem; display:inline-block;">✨ Travel fees are calculated based on round trip distance from Florence, SC ✨</div>
-        </div>
-      </div>
-    </section>
 
     <section id="policies"><div class="container"><div class="section-heading"><span class="kicker">Policies</span><h2>Before you book</h2><p>Deposits and time rules keep everything professional.</p></div><div class="policy-grid"><div class="card"><div><span class="policy-tag">Deposits</span><span class="policy-tag">$20 non-refundable</span></div><h3>Deposit Policy</h3><p>$20 deposit required within 24h of booking. No refunds after services.</p></div><div class="card"><div><span class="policy-tag">Timing</span><span class="policy-tag">Late & No-Show</span></div><h3>Late Policy</h3><p>10-min grace period, after that $10 late fee. After 15 min appointment may be canceled.</p></div><div class="card"><div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div><h3>Prep & Payments</h3><p>Arrive with bare nails unless soak-off added. Cash or Cash App accepted.</p></div></div></div></section>
 
@@ -769,7 +643,7 @@
           <a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank">Instagram · @ashawniz.nailz</a>
         </div>
       </div>
-      <div class="footer-bottom"><span>Bookings via DM or booking form. Based in Florence, SC area. © Ashawniz Nailz</span></div>
+      <div class="footer-bottom"><span>Book directly via Google Calendar or DM. Based in Florence, SC area. © Ashawniz Nailz</span></div>
     </div>
   </footer>
 </div>
