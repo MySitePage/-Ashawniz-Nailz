@@ -1,4 +1,5 @@
 
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -333,7 +334,7 @@
     .booking-header { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
     .booking-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
     
-    /* Google Calendar Button Styling - FACEBOOK FRIENDLY with direct link fallback */
+    /* Google Calendar Button Styling */
     .calendar-button-container {
       margin: 1rem 0;
       display: flex;
@@ -375,11 +376,6 @@
       background: linear-gradient(135deg, #7d3c98, #8e44ad);
       box-shadow: 0 12px 28px rgba(142,68,173,0.5);
     }
-    .facebook-note {
-      font-size: 0.7rem;
-      color: var(--text-light);
-      margin-top: 0.5rem;
-    }
     
     /* Alternative booking options */
     .alt-booking {
@@ -420,6 +416,34 @@
     .section-heading span.kicker { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--text-light); display: block; margin-bottom: 0.3rem; }
     .section-heading h2 { font-size: 1.7rem; margin-bottom: 0.4rem; }
     .section-heading p { font-size: 0.88rem; max-width: 550px; margin: 0 auto; color: var(--text-light); }
+    
+    /* Special Offer Banner */
+    .special-offer {
+      background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+      color: white;
+      padding: 1rem;
+      border-radius: 28px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(255,107,107,0.3);
+    }
+    .special-offer h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .special-offer p {
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+    }
+    .special-offer .price-cross {
+      text-decoration: line-through;
+      opacity: 0.8;
+      font-size: 0.75rem;
+    }
+    .special-offer .offer-price {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
     
     .about-grid, .services-grid, .policy-grid {
       display: grid;
@@ -609,17 +633,14 @@
           <div class="hero-meta">Click "Book via Calendar" to schedule directly. A $20 deposit is required to secure your booking.</div>
         </div>
 
-        <!-- DIRECT BOOKING CARD - FACEBOOK FRIENDLY with direct link -->
+        <!-- DIRECT BOOKING CARD -->
         <div class="booking-card" id="booking">
           <div class="booking-header"><span>📅</span><span>Book Direct Appointment</span></div>
           <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
           
-          <!-- Google Calendar Scheduling Button + FACEBOOK FRIENDLY DIRECT LINK -->
           <div class="calendar-button-container">
             <div id="google-calendar-btn"></div>
-            <!-- Direct booking link that ALWAYS works, especially on Facebook -->
-            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link (Works on Facebook)</a>
-            <div class="facebook-note">💡 Having trouble with the button above? Click the purple link — it works on all devices and Facebook!</div>
+            <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
           </div>
           
           <script>
@@ -665,26 +686,63 @@
 
     <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2><p>Full glam acrylic sets or relaxing pedicures — everything with pink & purple energy.</p></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong></p><p>• Charm sets include <strong>unlimited charms</strong></p><p>• Design sets include <strong>unlimited designs</strong></p><p>• Charm & Design combo sets include <strong>unlimited charms AND unlimited designs</strong></p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina.</p><div class="travel-fee-note"><strong>✈️ Travel Fees:</strong> Travel fees apply based on distance from Florence, SC. Please message me with your location for a quote before booking. Standard travel fee starts at $10 for nearby areas and increases based on mileage.</div></div></div></div></section>
 
-    <section id="services"><div class="container"><div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div><div class="services-grid"><div class="card"><h3>Acrylic Sets & Manicures</h3><div class="price-item"><span class="price-title">Full Set Acrylic</span><span>$60</span></div><div class="price-item"><span class="price-title">Acrylic Design Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm Set</span><span>$75</span></div><div class="price-item"><span class="price-title">Acrylic Charm/Design Set</span><span>$85</span></div><div class="price-note">✨ Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</div><div class="price-item"><span class="price-title">Basic Manicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Design Manicure</span><span>$50</span></div><div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$55</span></div></div><div class="card"><h3>Pedicure Menu</h3><div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div><div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div><div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div><p style="font-size:0.75rem; margin-top:0.5rem;">✨ Dry pedicure also available</p><div class="service-notes" style="margin-top:0.8rem;"><p><strong>📝 Pedicure Notes:</strong> Polish included with all pedicures. Upgrade options available upon request.</p></div></div><div class="card"><h3>Toe Add-Ons & Refills (UPDATED PRICES)</h3>
-              <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
-              <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
-              <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
-              <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
-              <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
-              <div class="price-item"><span>Acrylic (Toes) Refill</span><span>$30</span></div>
-              <div class="price-note">*must have at least 5 toes still on</div>
-              <div class="price-item"><span>Acrylic nails refill</span><span>$42</span></div>
-              <div class="price-note">*must have at least 4 nails on</div>
-              <div class="price-item"><span>Freestyle (Nail tech choice only)</span><span>$70</span></div>
-              <div class="price-item"><span>Polish change</span><span>$18</span></div>
-              <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
-              <div class="price-item"><span>Soak Off</span><span>$15</span></div>
-              <div class="price-item"><span>Deposit</span><span>$20</span></div>
-              <div class="price-note">Non-refundable deposit required to secure your appointment.</div>
-            </div>
-          </div>
+    <section id="services"><div class="container">
+      <div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div>
+      
+      <!-- FRENCH TIP SPECIAL OFFER -->
+      <div class="special-offer">
+        <h3>✨ FRENCH TIP SPECIAL ✨</h3>
+        <p><strong>French Tip Package — $90</strong></p>
+        <p>Includes: Classic Pedicure + Fullset French Tips (white/black only) + Fullset of (toes) French tips only</p>
+        <p><span class="price-cross">Original price was $180</span></p>
+        <p><strong>📅 June 1st – July 10th</strong></p>
+        <p style="font-size:0.7rem; margin-top:0.3rem;">💅🏾 Book your appointment today!</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="card">
+          <h3>Acrylic Sets & Manicures (UPDATED PRICES)</h3>
+          <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
+          <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
+          <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
+          <div class="price-item"><span class="price-title">Acrylic Charm/Design sets</span><span>$95</span></div>
+          <div class="price-note">✨ Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</div>
+          <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
+          <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$75</span></div>
+          <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
+          <div class="price-item"><span class="price-title">Kids Manicure</span><span>$20</span></div>
+          <div class="price-note">(Little lovers only)</div>
         </div>
-      </section>
+        
+        <div class="card">
+          <h3>Pedicure Menu</h3>
+          <div class="price-item"><span class="price-title">Classic Pedicure</span><span>$45</span></div>
+          <div class="price-item"><span class="price-title">Deluxe Pedicure</span><span>$50</span></div>
+          <div class="price-item"><span class="price-title">Luxury Pedicure</span><span>$55</span></div>
+          <p style="font-size:0.75rem; margin-top:0.5rem;">✨ Dry pedicure also available</p>
+          <div class="service-notes" style="margin-top:0.8rem;"><p><strong>📝 Pedicure Notes:</strong> Polish included with all pedicures. Upgrade options available upon request.</p></div>
+        </div>
+        
+        <div class="card">
+          <h3>Toe Add-Ons & Refills</h3>
+          <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
+          <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
+          <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
+          <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
+          <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
+          <div class="price-item"><span>Acrylic (Toes) Refill</span><span>$30</span></div>
+          <div class="price-note">*must have at least 5 toes still on</div>
+          <div class="price-item"><span>Acrylic nails refill</span><span>$42</span></div>
+          <div class="price-note">*must have at least 4 nails on</div>
+          <div class="price-item"><span>Freestyle (Nail tech choice only)</span><span>$70</span></div>
+          <div class="price-item"><span>Polish change</span><span>$18</span></div>
+          <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
+          <div class="price-item"><span>Soak Off</span><span>$15</span></div>
+          <div class="price-item"><span>Deposit</span><span>$20</span></div>
+          <div class="price-note">Non-refundable deposit required to secure your appointment.</div>
+        </div>
+      </div>
+    </div></section>
 
     <section id="policies"><div class="container"><div class="section-heading"><span class="kicker">Policies</span><h2>Before you book</h2><p>Deposits and time rules keep everything professional.</p></div><div class="policy-grid"><div class="card"><div><span class="policy-tag">Deposits</span><span class="policy-tag">$20 non-refundable</span></div><h3>Deposit Policy</h3><p>$20 deposit required within 24h of booking. No refunds after services. Deposit goes toward your total balance.</p></div><div class="card"><div><span class="policy-tag">Timing</span><span class="policy-tag">Late & No-Show</span></div><h3>Late Policy</h3><p>10-min grace period, after that $10 late fee added. After 15 minutes, your appointment may be canceled and deposit forfeited.</p></div><div class="card"><div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div><h3>Prep & Payments</h3><p>Arrive with bare nails unless soak-off was booked. Remaining balance can be paid in cash or via Cash App: <b>$AshawnizNailz</b>. Respect and communication are always appreciated.</p></div></div></div></section>
 
