@@ -32,8 +32,11 @@
       --shadow-soft: 0 18px 40px rgba(255, 179, 230, 0.3);
       --radius-lg: 28px;
       --radius-pill: 999px;
-      --highlight-green: #d4edda;
-      --highlight-green-border: #28a745;
+      /* Soft purple/pink highlights - on theme */
+      --highlight-purple-bg: #f3e8ff;
+      --highlight-purple-border: #c084fc;
+      --highlight-pink-bg: #ffe4f3;
+      --highlight-pink-border: #f9a8d4;
     }
 
     body {
@@ -70,25 +73,34 @@
       padding: 0 1.5rem;
     }
 
-    /* Highlight styles */
-    .highlight-green {
-      background-color: var(--highlight-green);
-      border-left: 4px solid var(--highlight-green-border);
+    /* Highlight styles - purple/pink theme only (no green) */
+    .highlight-purple {
+      background: linear-gradient(135deg, var(--highlight-purple-bg), var(--highlight-pink-bg));
+      border-left: 4px solid var(--highlight-purple-border);
       padding: 0.3rem 0.6rem;
-      border-radius: 12px;
+      border-radius: 16px;
       font-weight: 600;
+      margin: 0.2rem 0;
     }
     .price-highlight {
-      background-color: var(--highlight-green);
-      border-radius: 20px;
-      padding: 0.2rem 0.5rem;
+      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+      border-radius: 24px;
+      padding: 0.2rem 0.8rem;
       display: inline-block;
+      color: #7c3aed;
+      font-weight: 600;
+    }
+    .price-item.highlight-item {
+      background: linear-gradient(135deg, #faf0ff, #fff0f8);
+      border-radius: 20px;
+      padding: 0.3rem 0.6rem;
+      margin: 0.2rem 0;
     }
     .policy-highlight {
-      background-color: #fff3cd;
-      border-left: 4px solid #ffc107;
+      background: #fdf2f8;
+      border-left: 4px solid #f9a8d4;
       padding: 0.8rem;
-      border-radius: 16px;
+      border-radius: 20px;
       margin-bottom: 1rem;
     }
     .big-bold {
@@ -427,7 +439,15 @@
       transition: all 0.25s ease;
       height: 100%;
     }
-    .price-item { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.3rem; }
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      align-items: center;
+    }
     .price-title { font-weight: 600; }
     .price-note { font-size: 0.7rem; color: var(--purple-dark); margin-top: 0.25rem; font-style: italic; }
     .policy-tag {
@@ -545,32 +565,32 @@
     <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina.</p><div class="travel-fee-note"><strong>✈️ Travel Fees:</strong> Travel fees apply based on distance from Florence, SC. Please message me with your location for a quote before booking.</div></div></div></div></section>
 
     <section id="services"><div class="container">
-      <div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance: cash or Cash App <b>$AshawnizNailz</b>.</p></div>
+      <div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance accepted in cash.</p></div>
       <div class="services-grid">
         <div class="card">
           <h3>💅 Acrylic Sets & Manicures</h3>
           <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
           <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
           <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
-          <div class="price-item"><span class="price-title">Acrylic Charm/Design sets</span><span>$95</span></div>
-          <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
-          <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$75</span></div>
-          <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
-          <div class="price-item highlight-green"><span class="price-title">👧 Kids Manicure (Ages 5-12 only)</span><span>$20</span></div>
-          <div class="price-note">✨ Charm/Design sets include unlimited charms/designs</div>
+          <div class="price-item highlight-item"><span class="price-title">✨ Acrylic Charm/Design sets</span><span>$95</span></div>
+          <div class="price-item highlight-item"><span class="price-title">✨ Design Manicure</span><span>$60</span></div>
+          <div class="price-item highlight-item"><span class="price-title">✨ Charm/Design Manicure</span><span>$75</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
+          <div class="price-item highlight-purple"><span class="price-title">👧 Kids Manicure (Ages 5-12 only)</span><span>$20</span></div>
+          <div class="price-note">✨ Charm/Design sets include unlimited charms & designs</div>
         </div>
         <div class="card">
           <h3>🦶 Pedicure Menu <span class="price-highlight">(UPDATED PRICES)</span></h3>
-          <div class="price-item highlight-green"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
-          <div class="price-item highlight-green"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
-          <div class="price-item highlight-green"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
           <p class="price-note">✨ Dry pedicure also available | Polish included</p>
           <div class="service-notes"><p><strong>📝 French Tip Special (June 1 – July 10):</strong> Classic Pedicure + Fullset French Tips + Toes French tips = $90 (was $180)</p></div>
         </div>
         <div class="card">
           <h3>✍️ Add-Ons, Refills & Toes</h3>
-          <div class="price-item highlight-green"><span class="price-title">Acrylic Refill (nails)</span><span>$35</span></div>
-          <div class="price-item highlight-green"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$35</span></div>
+          <div class="price-item highlight-item"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
           <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
           <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
           <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
@@ -612,7 +632,7 @@
         <div class="card">
           <div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div>
           <h3>Prep & Payments</h3>
-          <p>Arrive with <strong>bare nails</strong> unless soak-off was booked. Remaining balance: cash or Cash App <b>$AshawnizNailz</b>.</p>
+          <p>Arrive with <strong>bare nails</strong> unless soak-off was booked. Remaining balance accepted in cash.</p>
           <div class="service-notes" style="margin-top:0.8rem;"><p><strong>👧 Kids Manicure:</strong> Ages 5-12 years old only. Parent/guardian must be present.</p></div>
         </div>
       </div>
