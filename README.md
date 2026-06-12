@@ -32,7 +32,6 @@
       --shadow-soft: 0 18px 40px rgba(255, 179, 230, 0.3);
       --radius-lg: 28px;
       --radius-pill: 999px;
-      /* Soft purple/pink highlights - on theme */
       --highlight-purple-bg: #f3e8ff;
       --highlight-purple-border: #c084fc;
       --highlight-pink-bg: #ffe4f3;
@@ -73,7 +72,7 @@
       padding: 0 1.5rem;
     }
 
-    /* Highlight styles - purple/pink theme only (no green) */
+    /* Highlight styles */
     .highlight-purple {
       background: linear-gradient(135deg, var(--highlight-purple-bg), var(--highlight-pink-bg));
       border-left: 4px solid var(--highlight-purple-border);
@@ -116,6 +115,78 @@
       border-radius: 20px;
       margin: 1rem 0;
       text-align: center;
+    }
+    /* FAQ Section */
+    .faq-section {
+      margin-top: 1rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      padding: 1.2rem;
+      border: 2px solid rgba(217, 179, 255, 0.5);
+    }
+    .faq-section h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      color: var(--purple-dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+    .faq-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.8rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid rgba(255, 179, 230, 0.3);
+    }
+    .faq-question {
+      font-weight: 700;
+      color: var(--purple-dark);
+      min-width: 140px;
+    }
+    .faq-answer {
+      color: var(--text-dark);
+    }
+    .refill-note {
+      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+      border-radius: 16px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    /* SUPER BOLD KIDS MANICURE NOTE */
+    .kids-highlight {
+      background: linear-gradient(135deg, #f0d4ff, #ffcce5);
+      border: 2px solid #c084fc;
+      border-radius: 20px;
+      padding: 0.5rem 0.8rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(192, 132, 252, 0.3);
+    }
+    .kids-highlight .price-title {
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .kids-highlight span {
+      font-weight: 800;
+    }
+    .kids-badge {
+      background: #c084fc;
+      color: white;
+      border-radius: 40px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.65rem;
+      margin-left: 0.5rem;
+      display: inline-block;
     }
 
     /* ========== RESPONSIVE HEADER ========== */
@@ -556,7 +627,7 @@
               }
             })();
           </script>
-          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — Non-refundable & non-transferable.</div>
+          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — Non-refundable & non-transferable. Deposits go towards final total!</div>
           <div class="alt-booking"><div class="alt-title">✨ Or book via social media ✨</div><div class="social-buttons"><a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" class="social-book-btn">📲 TikTok DM</a><a href="https://instagram.com/ashawniz.nailz" target="_blank" class="social-book-btn">📸 Instagram DM</a></div></div>
         </div>
       </div>
@@ -569,18 +640,25 @@
       <div class="services-grid">
         <div class="card">
           <h3>💅 Acrylic Sets & Manicures</h3>
+          <!-- Sorted least to greatest -->
+          <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
+          <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
           <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
-          <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
+          <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$75</span></div>
           <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
+          <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
           <div class="price-item highlight-item"><span class="price-title">✨ Acrylic Charm/Design sets</span><span>$95</span></div>
-          <div class="price-item highlight-item"><span class="price-title">✨ Design Manicure</span><span>$60</span></div>
-          <div class="price-item highlight-item"><span class="price-title">✨ Charm/Design Manicure</span><span>$75</span></div>
-          <div class="price-item highlight-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
-          <div class="price-item highlight-purple"><span class="price-title">👧 Kids Manicure (Ages 5-12 only)</span><span>$20</span></div>
-          <div class="price-note">✨ Charm/Design sets include unlimited charms & designs</div>
+          <!-- SUPER BOLD KIDS MANICURE - HIGHLIGHTED IN PINK/PURPLE -->
+          <div class="kids-highlight">
+            <span class="price-title">👧 Kids Manicure (Ages 5-12 ONLY)</span>
+            <span style="font-weight:800; font-size:1rem;">$20</span>
+            <span class="kids-badge">⚠️ Ages 5-12 ONLY ⚠️</span>
+          </div>
+          <div class="price-note">✨ Charm/Design sets include unlimited charms & designs | No extra charge for length!</div>
         </div>
         <div class="card">
           <h3>🦶 Pedicure Menu <span class="price-highlight">(UPDATED PRICES)</span></h3>
+          <!-- Sorted least to greatest -->
           <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
           <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
           <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
@@ -589,20 +667,35 @@
         </div>
         <div class="card">
           <h3>✍️ Add-Ons, Refills & Toes</h3>
+          <!-- Sorted least to greatest -->
+          <div class="price-item"><span class="price-title">Polish change</span><span>$18</span></div>
+          <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
+          <div class="price-item"><span class="price-title">Acrylic (Toes) Refill</span><span>$30</span></div>
+          <div class="refill-note">⚠️ Must have at least 5 toes still on for toe refill</div>
           <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$35</span></div>
           <div class="price-item highlight-item"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
+          <div class="refill-note">⚠️ Must have at least 4 nails on for nail refill</div>
           <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
           <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
           <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
           <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
           <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
-          <div class="price-item"><span>Acrylic (Toes) Refill</span><span>$30</span></div>
-          <div class="price-note">*must have at least 5 toes still on for refill</div>
-          <div class="price-item"><span>Polish change</span><span>$18</span></div>
           <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
           <div class="price-item"><span>Soak Off</span><span>$15</span></div>
           <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
-          <div class="price-item"><span>Deposit</span><span>$20</span></div>
+        </div>
+      </div>
+      
+      <!-- FAQ SECTION - Most clients ask these questions -->
+      <div class="faq-section">
+        <h3>💬 Frequently Asked Questions 💬</h3>
+        <div class="faq-list">
+          <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
+          <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
+          <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
+          <div class="faq-item"><span class="faq-question">❓ What does Design set include?</span><span class="faq-answer">Unlimited designs ONLY</span></div>
+          <div class="faq-item"><span class="faq-question">❓ What does Charm/Design set include?</span><span class="faq-answer">Unlimited charms AND unlimited designs</span></div>
+          <div class="faq-item"><span class="faq-question">❓ Refill requirements?</span><span class="faq-answer">Nail refill: at least 4 nails on | Toe refill: at least 5 toes on</span></div>
         </div>
       </div>
     </div></section>
