@@ -8,7 +8,7 @@
   <meta property="og:title" content="Ashawniz Nailz | Book Your Appointment" />
   <meta property="og:description" content="Professional nail tech in South Carolina. Acrylic sets, pedicures, custom designs. Book online!" />
   <meta property="og:type" content="website" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&family=Alex+Brush&display=swap" rel="stylesheet" />
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <style>
@@ -20,22 +20,24 @@
     }
 
     :root {
-      --primary-gradient: linear-gradient(135deg, #ffb3e6, #ff99cc);
-      --secondary-gradient: linear-gradient(135deg, #d9b3ff, #b366ff);
-      --page-bg-gradient: linear-gradient(135deg, #ffccff 0%, #ffb3e6 45%, #d9b3ff 55%, #b366ff 100%);
-      --pink-medium: #ffb3e6;
-      --purple-medium: #d9b3ff;
-      --purple-dark: #b366ff;
+      --primary-gradient: linear-gradient(135deg, #d4c4f7, #c4b5e8);
+      --secondary-gradient: linear-gradient(135deg, #e8d5f5, #dcc8f0);
+      --page-bg-gradient: linear-gradient(135deg, #f5edff 0%, #e8d5f5 30%, #dcc8f0 60%, #d4c4f7 100%);
+      --pink-medium: #e8d5f5;
+      --purple-medium: #d4c4f7;
+      --purple-dark: #b8a0e0;
+      --lavender-light: #f5edff;
+      --lavender-pastel: #dcc8f0;
       --light: #ffffff;
-      --text-dark: #5a3d5c;
-      --text-light: #7a5a7c;
-      --shadow-soft: 0 18px 40px rgba(255, 179, 230, 0.3);
+      --text-dark: #4a3a5c;
+      --text-light: #7a6a8c;
+      --shadow-soft: 0 18px 40px rgba(180, 150, 210, 0.25);
       --radius-lg: 28px;
       --radius-pill: 999px;
-      --highlight-purple-bg: #f3e8ff;
-      --highlight-purple-border: #c084fc;
-      --highlight-pink-bg: #ffe4f3;
-      --highlight-pink-border: #f9a8d4;
+      --highlight-purple-bg: #ede3f8;
+      --highlight-purple-border: #c4b0db;
+      --highlight-pink-bg: #f5edff;
+      --highlight-pink-border: #dcc8f0;
     }
 
     body {
@@ -44,7 +46,7 @@
       background-attachment: fixed;
       color: var(--text-dark);
       min-height: 100vh;
-      line-height: 1.5;
+      line-height: 1.6;
       position: relative;
     }
 
@@ -55,9 +57,10 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle at 20% 80%, rgba(255, 204, 255, 0.4) 0%, transparent 30%),
-                  radial-gradient(circle at 80% 20%, rgba(217, 179, 255, 0.4) 0%, transparent 30%),
-                  radial-gradient(circle at 40% 40%, rgba(255, 179, 230, 0.3) 0%, transparent 40%);
+      background: radial-gradient(circle at 20% 80%, rgba(212, 196, 247, 0.3) 0%, transparent 30%),
+                  radial-gradient(circle at 80% 20%, rgba(220, 200, 240, 0.3) 0%, transparent 30%),
+                  radial-gradient(circle at 40% 40%, rgba(232, 213, 245, 0.25) 0%, transparent 40%),
+                  radial-gradient(circle at 60% 60%, rgba(212, 196, 247, 0.2) 0%, transparent 40%);
       pointer-events: none;
       z-index: -1;
     }
@@ -72,32 +75,32 @@
       padding: 0 1.5rem;
     }
 
-    /* Highlight styles */
+    /* Highlight styles - lavender pastel theme */
     .highlight-purple {
-      background: linear-gradient(135deg, var(--highlight-purple-bg), var(--highlight-pink-bg));
-      border-left: 4px solid var(--highlight-purple-border);
+      background: linear-gradient(135deg, #ede3f8, #f5edff);
+      border-left: 4px solid #c4b0db;
       padding: 0.3rem 0.6rem;
       border-radius: 16px;
       font-weight: 600;
       margin: 0.2rem 0;
     }
     .price-highlight {
-      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+      background: linear-gradient(135deg, #ede3f8, #f5edff);
       border-radius: 24px;
       padding: 0.2rem 0.8rem;
       display: inline-block;
-      color: #7c3aed;
+      color: #7a5a8c;
       font-weight: 600;
     }
     .price-item.highlight-item {
-      background: linear-gradient(135deg, #faf0ff, #fff0f8);
+      background: linear-gradient(135deg, #f5edff, #ede3f8);
       border-radius: 20px;
       padding: 0.3rem 0.6rem;
       margin: 0.2rem 0;
     }
     .policy-highlight {
-      background: #fdf2f8;
-      border-left: 4px solid #f9a8d4;
+      background: #f5edff;
+      border-left: 4px solid #dcc8f0;
       padding: 0.8rem;
       border-radius: 20px;
       margin-bottom: 1rem;
@@ -106,11 +109,11 @@
       font-size: 1.2rem;
       font-weight: 800;
       text-transform: uppercase;
-      color: #dc3545;
+      color: #c0392b;
     }
     .warning-box {
-      background: linear-gradient(135deg, rgba(255, 220, 220, 0.9), rgba(255, 200, 200, 0.9));
-      border: 2px solid #dc3545;
+      background: linear-gradient(135deg, rgba(255, 220, 220, 0.85), rgba(255, 200, 200, 0.85));
+      border: 2px solid #e74c3c;
       padding: 0.8rem;
       border-radius: 20px;
       margin: 1rem 0;
@@ -118,59 +121,63 @@
     }
     /* FAQ Section */
     .faq-section {
-      margin-top: 1rem;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 24px;
-      padding: 1.2rem;
-      border: 2px solid rgba(217, 179, 255, 0.5);
+      margin-top: 1.5rem;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 28px;
+      padding: 1.5rem;
+      border: 2px solid rgba(212, 196, 247, 0.5);
+      box-shadow: 0 8px 25px rgba(180, 150, 210, 0.15);
     }
     .faq-section h3 {
       font-size: 1.1rem;
       margin-bottom: 0.8rem;
-      color: var(--purple-dark);
+      color: #7a5a8c;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      font-weight: 700;
     }
     .faq-list {
       display: flex;
       flex-direction: column;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
     .faq-item {
       display: flex;
       align-items: flex-start;
       gap: 0.6rem;
-      font-size: 0.8rem;
-      padding: 0.3rem 0;
-      border-bottom: 1px solid rgba(255, 179, 230, 0.3);
+      font-size: 0.85rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(212, 196, 247, 0.25);
     }
     .faq-question {
       font-weight: 700;
-      color: var(--purple-dark);
-      min-width: 140px;
+      color: #7a5a8c;
+      min-width: 160px;
+      flex-shrink: 0;
     }
     .faq-answer {
       color: var(--text-dark);
     }
     .refill-note {
-      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+      background: linear-gradient(135deg, #f5edff, #ede3f8);
       border-radius: 16px;
       padding: 0.4rem 0.8rem;
       font-size: 0.7rem;
       margin-top: 0.3rem;
       text-align: center;
       font-weight: 500;
+      border: 1px solid rgba(212, 196, 247, 0.3);
     }
-    /* SUPER BOLD KIDS MANICURE NOTE */
+    /* SUPER BOLD KIDS MANICURE NOTE - Lavender theme */
     .kids-highlight {
-      background: linear-gradient(135deg, #f0d4ff, #ffcce5);
-      border: 2px solid #c084fc;
+      background: linear-gradient(135deg, #ede3f8, #f5edff);
+      border: 2px solid #c4b0db;
       border-radius: 20px;
       padding: 0.5rem 0.8rem;
       margin: 0.5rem 0;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(192, 132, 252, 0.3);
+      box-shadow: 0 2px 8px rgba(180, 150, 210, 0.2);
     }
     .kids-highlight .price-title {
       font-weight: 800;
@@ -180,7 +187,7 @@
       font-weight: 800;
     }
     .kids-badge {
-      background: #c084fc;
+      background: #c4b0db;
       color: white;
       border-radius: 40px;
       padding: 0.2rem 0.7rem;
@@ -189,15 +196,15 @@
       display: inline-block;
     }
 
-    /* ========== RESPONSIVE HEADER ========== */
+    /* ========== HEADER ========== */
     header {
       position: sticky;
       top: 0;
       z-index: 50;
-      backdrop-filter: blur(20px);
-      background: linear-gradient(to right, rgba(255, 179, 230, 0.96), rgba(217, 179, 255, 0.96));
-      border-bottom: 2px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 4px 20px rgba(255, 179, 230, 0.25);
+      backdrop-filter: blur(22px);
+      background: linear-gradient(to right, rgba(220, 200, 240, 0.92), rgba(212, 196, 247, 0.92));
+      border-bottom: 2px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 20px rgba(180, 150, 210, 0.2);
     }
 
     .nav {
@@ -215,28 +222,29 @@
       flex-shrink: 0;
     }
 
-    .logo-circle {
-      width: 44px;
-      height: 44px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
-      box-shadow: 0 0 18px rgba(255, 179, 230, 0.6);
-      border: 2px solid rgba(255, 255, 255, 0.9);
-    }
-
     .logo-text-main {
       font-family: "Pacifico", cursive;
       font-size: 1.3rem;
       letter-spacing: 0.02em;
-      color: var(--text-dark);
+      color: #4a3a5c;
       line-height: 1.2;
+    }
+    /* SWOOPY CURSIVE 'A' - a bit thicker */
+    .logo-text-main .swoopy-a {
+      font-family: "Alex Brush", cursive;
+      font-size: 1.7rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      display: inline-block;
+      color: #4a3a5c;
+      margin-right: -0.05rem;
     }
 
     .logo-text-sub {
       font-size: 0.65rem;
       text-transform: uppercase;
       letter-spacing: 0.12em;
-      color: var(--text-light);
+      color: #7a6a8c;
     }
 
     .nav-links {
@@ -251,7 +259,7 @@
       letter-spacing: 0.1em;
       font-weight: 600;
       font-size: 0.75rem;
-      color: var(--text-dark);
+      color: #4a3a5c;
       white-space: nowrap;
       padding: 0.4rem 0;
     }
@@ -264,7 +272,7 @@
       width: 0;
       height: 2.5px;
       border-radius: 999px;
-      background: linear-gradient(135deg, var(--pink-medium), var(--purple-medium));
+      background: linear-gradient(135deg, #dcc8f0, #c4b0db);
       transition: width 0.25s ease;
     }
 
@@ -277,19 +285,19 @@
       padding: 0.55rem 1.3rem;
       border-radius: var(--radius-pill);
       background: var(--light);
-      color: var(--text-dark);
+      color: #4a3a5c;
       font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 4px 12px rgba(255, 179, 230, 0.4);
+      border: 2px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 12px rgba(180, 150, 210, 0.3);
       transition: all 0.25s ease;
     }
 
     .nav-btn:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(255, 179, 230, 0.5);
+      box-shadow: 0 8px 20px rgba(180, 150, 210, 0.4);
     }
 
     .nav-toggle {
@@ -298,7 +306,7 @@
       border: none;
       font-size: 1.8rem;
       cursor: pointer;
-      color: var(--text-dark);
+      color: #4a3a5c;
       padding: 0.2rem;
       line-height: 1;
     }
@@ -313,8 +321,8 @@
         flex-direction: column;
         align-items: flex-start;
         padding: 1.2rem 1.5rem 1.5rem;
-        background: linear-gradient(135deg, rgba(255, 179, 230, 0.98), rgba(217, 179, 255, 0.98));
-        border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+        background: linear-gradient(135deg, rgba(220, 200, 240, 0.98), rgba(212, 196, 247, 0.98));
+        border-bottom: 2px solid rgba(255, 255, 255, 0.7);
         transform: scaleY(0);
         opacity: 0;
         pointer-events: none;
@@ -324,7 +332,7 @@
         backdrop-filter: blur(24px);
         z-index: 100;
         border-radius: 0 0 28px 28px;
-        box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+        box-shadow: 0 20px 35px rgba(0,0,0,0.08);
       }
       .nav-links.open {
         transform: scaleY(1);
@@ -347,7 +355,7 @@
     @media (max-width: 550px) {
       .container { padding: 0 1rem; }
       .logo-text-main { font-size: 1.1rem; }
-      .logo-circle { width: 38px; height: 38px; }
+      .logo-text-main .swoopy-a { font-size: 1.4rem; }
       .logo-text-sub { font-size: 0.55rem; }
     }
 
@@ -370,21 +378,22 @@
       align-items: center;
       gap: 0.4rem;
       margin-bottom: 0.7rem;
-      color: var(--text-light);
+      color: #7a6a8c;
     }
-    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pink-medium); }
+    .eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: #dcc8f0; }
     .hero h1 {
       font-size: clamp(1.8rem, 6vw, 3rem);
       line-height: 1.2;
       margin-bottom: 0.8rem;
+      color: #4a3a5c;
     }
     .hero h1 span.highlight {
-      background: linear-gradient(135deg, #ff99cc, #b366ff);
+      background: linear-gradient(135deg, #c4b0db, #b8a0e0);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    .hero-subtitle { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.3rem; color: var(--text-light); }
+    .hero-subtitle { font-size: 0.95rem; opacity: 0.9; margin-bottom: 1.3rem; color: #7a6a8c; }
     .hero-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.3rem; }
     .badge {
       padding: 0.45rem 1rem;
@@ -392,7 +401,7 @@
       border-radius: var(--radius-pill);
       background: rgba(255, 255, 255, 0.8);
       backdrop-filter: blur(8px);
-      border: 1.5px solid rgba(255, 255, 255, 0.85);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
       display: inline-flex;
       align-items: center;
       gap: 0.3rem;
@@ -415,37 +424,132 @@
       .btn-primary, .btn-secondary { padding: 0.65rem 1.2rem; font-size: 0.7rem; }
     }
     .btn-primary {
-      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
-      color: var(--text-dark);
-      box-shadow: 0 12px 25px rgba(255, 179, 230, 0.4);
+      background: linear-gradient(135deg, #dcc8f0, #c4b0db);
+      color: #4a3a5c;
+      box-shadow: 0 12px 25px rgba(180, 150, 210, 0.35);
     }
     .btn-primary:hover { transform: translateY(-3px); }
     .btn-secondary {
       background: rgba(255, 255, 255, 0.88);
-      border: 1.5px solid rgba(255, 179, 230, 0.7);
+      border: 1.5px solid rgba(180, 150, 210, 0.5);
     }
     .hero-meta { font-size: 0.72rem; opacity: 0.85; }
 
+    /* ========== MEET YOUR ARTIST SECTION - MOBILE FRIENDLY ========== */
+    .artist-section {
+      padding: 2rem 0;
+    }
+    .artist-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) {
+      .artist-grid {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 2.5rem;
+      }
+    }
+    @media (max-width: 767px) {
+      .artist-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      /* On mobile, show photo above text */
+      .artist-grid .artist-photo {
+        order: -1;
+      }
+    }
+    .artist-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      border-radius: 32px;
+      padding: 1.5rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
+      box-shadow: 0 12px 30px rgba(180, 150, 210, 0.15);
+    }
+    @media (min-width: 768px) {
+      .artist-card {
+        padding: 2rem;
+      }
+    }
+    .artist-card h2 {
+      font-family: "Pacifico", cursive;
+      font-size: 1.6rem;
+      color: #4a3a5c;
+      margin-bottom: 0.5rem;
+    }
+    @media (min-width: 768px) {
+      .artist-card h2 {
+        font-size: 2rem;
+      }
+    }
+    .artist-card h2 .swoopy-a {
+      font-family: "Alex Brush", cursive;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #4a3a5c;
+    }
+    @media (min-width: 768px) {
+      .artist-card h2 .swoopy-a {
+        font-size: 2.4rem;
+      }
+    }
+    .artist-card p {
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      margin-top: 0.3rem;
+    }
+    @media (min-width: 768px) {
+      .artist-card p {
+        font-size: 0.95rem;
+        line-height: 1.8;
+      }
+    }
+    .artist-photo {
+      border-radius: 28px;
+      overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 30px rgba(180, 150, 210, 0.2);
+      aspect-ratio: 3 / 4;
+      max-height: 400px;
+      width: 100%;
+    }
+    @media (max-width: 767px) {
+      .artist-photo {
+        max-height: 300px;
+        aspect-ratio: 3 / 4;
+      }
+    }
+    .artist-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
     /* Booking Card */
     .booking-card {
-      background: rgba(255, 255, 255, 0.92);
+      background: rgba(255, 255, 255, 0.9);
       backdrop-filter: blur(18px);
       border-radius: 36px;
       padding: 1.8rem;
-      box-shadow: 0 25px 45px rgba(255, 179, 230, 0.35);
-      border: 2px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 25px 45px rgba(180, 150, 210, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.8);
       transition: all 0.3s ease;
       text-align: center;
     }
-    .booking-header { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
-    .booking-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    .booking-header { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; color: #4a3a5c; }
+    .booking-sub { font-size: 0.8rem; color: #7a6a8c; margin-bottom: 1.5rem; }
     .calendar-button-container { margin: 1rem 0; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
     .calendar-link, .direct-booking-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 0.6rem;
-      background: linear-gradient(135deg, #039BE5, #0288d1);
+      background: linear-gradient(135deg, #a8a0d0, #b8a0e0);
       color: white;
       padding: 0.9rem 2rem;
       border-radius: 60px;
@@ -458,9 +562,9 @@
       max-width: 320px;
       text-align: center;
     }
-    .direct-booking-link { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
-    .alt-booking { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid rgba(255, 179, 230, 0.4); }
-    .alt-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.8rem; }
+    .direct-booking-link { background: linear-gradient(135deg, #a8a0d0, #b8a0e0); }
+    .alt-booking { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid rgba(180, 150, 210, 0.3); }
+    .alt-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #7a6a8c; margin-bottom: 0.8rem; }
     .social-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
     .social-book-btn {
       display: inline-flex;
@@ -471,22 +575,23 @@
       border-radius: 60px;
       font-size: 0.75rem;
       font-weight: 600;
-      border: 1px solid rgba(255, 179, 230, 0.6);
+      border: 1px solid rgba(180, 150, 210, 0.4);
     }
     .deposit-note {
-      background: linear-gradient(135deg, rgba(255, 230, 245, 0.7), rgba(230, 210, 255, 0.7));
+      background: linear-gradient(135deg, #f5edff, #ede3f8);
       padding: 0.6rem;
       border-radius: 28px;
       font-size: 0.7rem;
       margin-top: 1rem;
       text-align: center;
+      border: 1px solid rgba(180, 150, 210, 0.2);
     }
 
     /* Sections */
     section { padding: 2.5rem 0; }
     .section-heading { text-align: center; margin-bottom: 2rem; }
-    .section-heading span.kicker { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--text-light); display: block; margin-bottom: 0.3rem; }
-    .section-heading h2 { font-size: 1.7rem; margin-bottom: 0.4rem; }
+    .section-heading span.kicker { font-size: 0.72rem; letter-spacing: 0.2em; color: #7a6a8c; display: block; margin-bottom: 0.3rem; }
+    .section-heading h2 { font-size: 1.7rem; margin-bottom: 0.4rem; color: #4a3a5c; }
 
     .about-grid, .services-grid, .policy-grid { display: grid; gap: 1.3rem; }
     .about-grid { grid-template-columns: 1fr; }
@@ -506,9 +611,10 @@
       border-radius: 28px;
       padding: 1.4rem;
       backdrop-filter: blur(12px);
-      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      border: 1.5px solid rgba(255, 255, 255, 0.8);
       transition: all 0.25s ease;
       height: 100%;
+      box-shadow: 0 8px 20px rgba(180, 150, 210, 0.12);
     }
     .price-item {
       display: flex;
@@ -520,18 +626,19 @@
       align-items: center;
     }
     .price-title { font-weight: 600; }
-    .price-note { font-size: 0.7rem; color: var(--purple-dark); margin-top: 0.25rem; font-style: italic; }
+    .price-note { font-size: 0.7rem; color: #7a5a8c; margin-top: 0.25rem; font-style: italic; }
     .policy-tag {
       display: inline-block;
       font-size: 0.66rem;
       padding: 0.25rem 0.9rem;
-      background: linear-gradient(135deg, rgba(255, 204, 255, 0.5), rgba(217, 179, 255, 0.5));
+      background: linear-gradient(135deg, #ede3f8, #f5edff);
       border-radius: 60px;
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
+      border: 1px solid rgba(180, 150, 210, 0.2);
     }
-    .travel-fee-note { background: linear-gradient(135deg, rgba(255, 230, 245, 0.7), rgba(230, 210, 255, 0.7)); padding: 0.5rem; border-radius: 20px; font-size: 0.7rem; margin-top: 0.8rem; text-align: center; }
-    .service-notes { margin-top: 0.8rem; padding: 0.6rem; background: rgba(255, 240, 250, 0.6); border-radius: 20px; font-size: 0.7rem; border-left: 3px solid var(--purple-medium); }
+    .travel-fee-note { background: linear-gradient(135deg, #f5edff, #ede3f8); padding: 0.5rem; border-radius: 20px; font-size: 0.7rem; margin-top: 0.8rem; text-align: center; }
+    .service-notes { margin-top: 0.8rem; padding: 0.6rem; background: #f5edff; border-radius: 20px; font-size: 0.7rem; border-left: 3px solid #dcc8f0; }
 
     /* Gallery */
     .gallery-strip { background: rgba(255, 255, 255, 0.85); border-radius: 28px; padding: 1.2rem; }
@@ -547,7 +654,7 @@
     .gallery-slide img { width: 100%; height: 100%; object-fit: cover; }
     .gallery-btn {
       border-radius: 60px;
-      border: 1.5px solid rgba(255, 179, 230, 0.7);
+      border: 1.5px solid rgba(180, 150, 210, 0.5);
       background: rgba(255, 255, 255, 0.9);
       padding: 0.45rem 1.2rem;
       font-size: 0.75rem;
@@ -557,8 +664,8 @@
 
     footer {
       padding: 1.8rem 0;
-      border-top: 2px solid rgba(255, 179, 230, 0.5);
-      background: linear-gradient(to right, rgba(255, 179, 230, 0.4), rgba(217, 179, 255, 0.4));
+      border-top: 2px solid rgba(180, 150, 210, 0.3);
+      background: linear-gradient(to right, rgba(220, 200, 240, 0.4), rgba(212, 196, 247, 0.4));
     }
     .footer-top, .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
     .footer-socials { display: flex; gap: 0.8rem; flex-wrap: wrap; }
@@ -571,9 +678,10 @@
     <div class="container">
       <nav class="nav">
         <div class="logo-group">
-          <div class="logo-circle"></div>
           <div>
-            <div class="logo-text-main">Ashawniz Nailz</div>
+            <div class="logo-text-main">
+              <span class="swoopy-a">A</span>shawniz Nailz
+            </div>
             <div class="logo-text-sub">South Carolina Nail Tech</div>
           </div>
         </div>
@@ -620,7 +728,7 @@
                 var checkCalendar = function() {
                   if (window.calendar && window.calendar.schedulingButton) {
                     target.innerHTML = '';
-                    window.calendar.schedulingButton.load({ url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true', color: '#039BE5', label: '📅 Book with Google Calendar', target: target });
+                    window.calendar.schedulingButton.load({ url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true', color: '#a8a0d0', label: '📅 Book with Google Calendar', target: target });
                   } else { target.innerHTML = '<a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" target="_blank" class="calendar-link">📅 Book with Google Calendar</a>'; }
                 };
                 window.addEventListener('load', checkCalendar);
@@ -633,6 +741,19 @@
       </div>
     </section>
 
+    <!-- ========== MEET YOUR ARTIST SECTION ========== -->
+    <section class="artist-section">
+      <div class="container artist-grid">
+        <div class="artist-card">
+          <h2><span class="swoopy-a">✨</span> Meet Your Artist</h2>
+          <p>Hi! I'm a 19-year-old licensed nail technician from Florence, South Carolina, and I'm passionate about helping every client leave my chair feeling confident, beautiful, and like the best version of themselves. I believe nails are more than just a service—they're a form of self-expression and self-care. Whether you're looking for a simple, classy set or a bold, creative design, I'm dedicated to bringing your vision to life with attention to detail and a welcoming, comfortable experience. My goal is to make every appointment fun, relaxing, and personalized, so you leave not only loving your nails but feeling refreshed and empowered. I can't wait to meet you and create something you'll absolutely love!</p>
+        </div>
+        <div class="artist-photo">
+          <img src="https://i.postimg.cc/fRWQtnqj/734783257-990483850554451-1860372236499901215-n.jpg" alt="Ashawniz Nailz - Your Artist">
+        </div>
+      </div>
+    </section>
+
     <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina.</p><div class="travel-fee-note"><strong>✈️ Travel Fees:</strong> Travel fees apply based on distance from Florence, SC. Please message me with your location for a quote before booking.</div></div></div></div></section>
 
     <section id="services"><div class="container">
@@ -640,7 +761,6 @@
       <div class="services-grid">
         <div class="card">
           <h3>💅 Acrylic Sets & Manicures</h3>
-          <!-- Sorted least to greatest -->
           <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
           <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
           <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
@@ -648,7 +768,6 @@
           <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
           <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
           <div class="price-item highlight-item"><span class="price-title">✨ Acrylic Charm/Design sets</span><span>$95</span></div>
-          <!-- SUPER BOLD KIDS MANICURE - HIGHLIGHTED IN PINK/PURPLE -->
           <div class="kids-highlight">
             <span class="price-title">👧 Kids Manicure (Ages 5-12 ONLY)</span>
             <span style="font-weight:800; font-size:1rem;">$20</span>
@@ -658,7 +777,6 @@
         </div>
         <div class="card">
           <h3>🦶 Pedicure Menu <span class="price-highlight">(UPDATED PRICES)</span></h3>
-          <!-- Sorted least to greatest -->
           <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
           <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
           <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
@@ -667,7 +785,6 @@
         </div>
         <div class="card">
           <h3>✍️ Add-Ons, Refills & Toes</h3>
-          <!-- Sorted least to greatest -->
           <div class="price-item"><span class="price-title">Polish change</span><span>$18</span></div>
           <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
           <div class="price-item"><span class="price-title">Acrylic (Toes) Refill</span><span>$30</span></div>
@@ -686,7 +803,6 @@
         </div>
       </div>
       
-      <!-- FAQ SECTION - Most clients ask these questions -->
       <div class="faq-section">
         <h3>💬 Frequently Asked Questions 💬</h3>
         <div class="faq-list">
@@ -740,7 +856,7 @@
   <footer>
     <div class="container">
       <div class="footer-top">
-        <div><div class="logo-text-main" style="font-size:1.1rem;">Ashawniz Nailz</div><div class="logo-text-sub">South Carolina Nail Tech · Pink & Purple Vibes</div></div>
+        <div><div class="logo-text-main" style="font-size:1.1rem;"><span class="swoopy-a" style="font-size:1.4rem;">A</span>shawniz Nailz</div><div class="logo-text-sub">South Carolina Nail Tech · Lavender Princess Vibes 👑</div></div>
         <div class="footer-socials"><a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank">TikTok · @ashawniz.nailz</a><a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank">Instagram · @ashawniz.nailz</a></div>
       </div>
       <div class="footer-bottom"><span>Book directly via Google Calendar or DM. Based in Florence, SC. Travel fees apply. © Ashawniz Nailz</span></div>
