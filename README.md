@@ -18,7 +18,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 0; /* No gaps */
+      padding: 0;
     }
 
     /* ===== FULL-WIDTH IMAGE SECTIONS ===== */
@@ -28,8 +28,8 @@
       justify-content: center;
       align-items: center;
       position: relative;
-      padding: 0; /* No gaps between images */
-      line-height: 0; /* Removes extra spacing below images */
+      padding: 0;
+      line-height: 0;
     }
 
     .section img {
@@ -157,24 +157,22 @@
     <img src="https://i.postimg.cc/63WspT0M/7.png" alt="Ashawniz Nailz 5" />
   </section>
 
-  <!-- ===== 6 ===== -->
+  <!-- ===== 6 (REMOVED) ===== -->
+  <!-- The 6th image (8.png) has been removed -->
+
+  <!-- ===== 7 (REPLACED) ===== -->
   <section class="section">
-    <img src="https://i.postimg.cc/gjjf3516/8.png" alt="Ashawniz Nailz 6" />
+    <img src="https://i.postimg.cc/rmVP1b7f/8.png" alt="Ashawniz Nailz 7" />
   </section>
 
-  <!-- ===== 7 ===== -->
+  <!-- ===== 8 (REPLACED) ===== -->
   <section class="section">
-    <img src="https://i.postimg.cc/G2L0m9QH/10.png" alt="Ashawniz Nailz 7" />
+    <img src="https://i.postimg.cc/pTW6f73k/10.png" alt="Ashawniz Nailz 8" />
   </section>
 
-  <!-- ===== 8 ===== -->
+  <!-- ===== 9 (REPLACED) ===== -->
   <section class="section">
-    <img src="https://i.postimg.cc/SRRwc5HM/9.png" alt="Ashawniz Nailz 8" />
-  </section>
-
-  <!-- ===== 9 ===== -->
-  <section class="section">
-    <img src="https://i.postimg.cc/DZvVwmgQ/11.png" alt="Ashawniz Nailz 9" />
+    <img src="https://i.postimg.cc/fLzrcF1B/9.png" alt="Ashawniz Nailz 9" />
   </section>
 
   <!-- ===== 10 WITH GOOGLE CALENDAR BOOKING FORM ===== -->
