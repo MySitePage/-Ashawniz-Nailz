@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -38,7 +39,7 @@
       image-rendering: auto;
     }
 
-    /* ===== SECTION 10: IMAGE + GOOGLE CALENDAR BOOKING FORM ===== */
+    /* ===== SECTION 9: IMAGE + GOOGLE CALENDAR BOOKING FORM (MOVED HERE) ===== */
     .section-booking {
       position: relative;
       width: 100%;
@@ -58,7 +59,7 @@
 
     .booking-overlay {
       position: absolute;
-      top: 60%; /* MOVED LOWER - was 50% */
+      top: 62%; /* Slightly lower on the image */
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -101,7 +102,7 @@
         max-width: 500px;
         padding: 1.5rem 1.2rem 1.2rem;
         border-radius: 22px;
-        top: 58%; /* Slightly lower on tablet */
+        top: 58%;
       }
       .booking-overlay iframe {
         height: 380px;
@@ -118,7 +119,7 @@
         max-width: 340px;
         padding: 1rem 0.8rem 0.8rem;
         border-radius: 18px;
-        top: 55%; /* Lower on mobile */
+        top: 55%;
       }
       .booking-overlay iframe {
         height: 300px;
@@ -173,18 +174,18 @@
     <img src="https://i.postimg.cc/NfbV1vMm/Ashawniz-website-20260713-054843-0000.png" alt="Ashawniz Nailz 8" />
   </section>
 
-  <!-- ===== 9 (REPLACED) ===== -->
-  <section class="section">
-    <img src="https://i.postimg.cc/WbSKMc3k/Ashawniz-website-20260713-054957-0000.png" alt="Ashawniz Nailz 9" />
-  </section>
-
-  <!-- ===== 10 WITH GOOGLE CALENDAR BOOKING FORM (REPLACED & LOWER) ===== -->
+  <!-- ===== 9 WITH GOOGLE CALENDAR BOOKING FORM (MOVED HERE, LOWER) ===== -->
   <section class="section-booking">
-    <img src="https://i.postimg.cc/qMQY8HRn/Ashawniz-website-20260713-054919-0000.png" alt="Ashawniz Nailz 10" />
+    <img src="https://i.postimg.cc/WbSKMc3k/Ashawniz-website-20260713-054957-0000.png" alt="Ashawniz Nailz 9" />
     <div class="booking-overlay">
       <span class="booking-label">📅 Book Your Appointment</span>
       <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3oQ_TEb_466J-uqGzM5uAPRLlO6iVzcO8g0amt9Kx-nFlWZBsapbDCK2pF0MWaxjp04l8OEDuI?gv=true" frameborder="0" allowfullscreen></iframe>
     </div>
+  </section>
+
+  <!-- ===== 10 (REPLACED) - NOW WITHOUT BOOKING ===== -->
+  <section class="section">
+    <img src="https://i.postimg.cc/qMQY8HRn/Ashawniz-website-20260713-054919-0000.png" alt="Ashawniz Nailz 10" />
   </section>
 
   <!-- ===== 11 (REPLACED) ===== -->
