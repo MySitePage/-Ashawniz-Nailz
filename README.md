@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -530,7 +530,6 @@
       margin-right: 0.5rem;
       margin-bottom: 0.5rem;
     }
-    .travel-fee-note { background: linear-gradient(135deg, rgba(255, 230, 245, 0.7), rgba(230, 210, 255, 0.7)); padding: 0.5rem; border-radius: 20px; font-size: 0.7rem; margin-top: 0.8rem; text-align: center; }
     .service-notes { margin-top: 0.8rem; padding: 0.6rem; background: rgba(255, 240, 250, 0.6); border-radius: 20px; font-size: 0.7rem; border-left: 3px solid var(--purple-medium); }
 
     /* Gallery */
@@ -599,7 +598,6 @@
           <div class="hero-badges">
             <div class="badge"><span class="badge-dot"></span> Registered Cosmetologist</div>
             <div class="badge"><span class="badge-dot"></span> Florence, SC Area</div>
-            <div class="badge"><span class="badge-dot"></span> Travel nail tech · SC (fees apply)</div>
           </div>
           <div class="hero-actions">
             <a class="btn-primary" href="#booking"><span>📅</span><span>Book via Calendar</span></a>
@@ -633,7 +631,7 @@
       </div>
     </section>
 
-    <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area & Travel</h3><p>Based in Florence, SC. Mobile appointments across South Carolina.</p><div class="travel-fee-note"><strong>✈️ Travel Fees:</strong> Travel fees apply based on distance from Florence, SC. Please message me with your location for a quote before booking.</div></div></div></div></section>
+    <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area</h3><p>Based in Florence, SC.</p></div></div></div></section>
 
     <section id="services"><div class="container">
       <div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance accepted in cash.</p></div>
@@ -743,7 +741,7 @@
         <div><div class="logo-text-main" style="font-size:1.1rem;">Ashawniz Nailz</div><div class="logo-text-sub">South Carolina Nail Tech · Pink & Purple Vibes</div></div>
         <div class="footer-socials"><a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank">TikTok · @ashawniz.nailz</a><a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank">Instagram · @ashawniz.nailz</a></div>
       </div>
-      <div class="footer-bottom"><span>Book directly via Google Calendar or DM. Based in Florence, SC. Travel fees apply. © Ashawniz Nailz</span></div>
+      <div class="footer-bottom"><span>Book directly via Google Calendar or DM. Based in Florence, SC. © Ashawniz Nailz</span></div>
     </div>
   </footer>
 </div>
