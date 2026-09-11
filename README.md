@@ -580,6 +580,170 @@
     .footer-socials { display: flex; gap: 0.8rem; flex-wrap: wrap; }
     .footer-pill { padding: 0.4rem 1rem; border-radius: 60px; background: rgba(255, 255, 255, 0.85); font-size: 0.72rem; }
     .footer-pill:hover { background: white; }
+
+    /* ============================================ */
+    /* DESKTOP-FRIENDLY ENHANCEMENTS (1025px+)      */
+    /* Mobile optimization is fully preserved below */
+    /* ============================================ */
+    @media (min-width: 1025px) {
+      .container {
+        max-width: 1320px;
+        padding: 0 2.5rem;
+      }
+
+      /* More breathing room on large screens */
+      section { padding: 3.5rem 0; }
+      .hero { padding: 3.5rem 0 3rem; }
+
+      /* Hero grid: give the text side more room */
+      .hero-grid {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+
+      /* Larger hero text on desktop */
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+      .hero-subtitle {
+        font-size: 1.05rem;
+        max-width: 540px;
+      }
+      .hero-actions {
+        gap: 1rem;
+      }
+
+      /* Larger buttons on desktop */
+      .btn-primary, .btn-secondary {
+        padding: 0.95rem 1.9rem;
+        font-size: 0.85rem;
+      }
+
+      /* Side info card in hero gets more padding */
+      .hero-grid > .card {
+        padding: 2.8rem 2rem;
+      }
+
+      /* Section headings bigger on desktop */
+      .section-heading h2 {
+        font-size: 2.1rem;
+      }
+      .section-heading {
+        margin-bottom: 2.5rem;
+      }
+
+      /* Services & Policy grids: 3 columns with more gap */
+      .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8rem;
+      }
+      .policy-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8rem;
+      }
+      .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.8rem;
+      }
+
+      /* Cards get a touch more padding */
+      .card {
+        padding: 1.8rem;
+        border-radius: 30px;
+      }
+
+      /* FAQ gets more room */
+      .faq-section {
+        padding: 2rem;
+        border-radius: 30px;
+      }
+      .faq-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
+      }
+      .faq-item {
+        font-size: 0.9rem;
+        padding: 0.5rem 0;
+      }
+      .faq-question {
+        min-width: 200px;
+      }
+
+      /* Booking section: bigger and wider */
+      .booking-section {
+        padding: 4rem 0;
+      }
+      .booking-card {
+        max-width: 900px;
+        padding: 3.5rem 3rem;
+        border-radius: 40px;
+      }
+      .booking-header {
+        font-size: 1.8rem;
+      }
+      .booking-sub {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+      .calendar-link, .direct-booking-link {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.05rem;
+        max-width: 380px;
+      }
+      .deposit-note {
+        font-size: 0.85rem;
+        padding: 0.9rem 1.2rem;
+      }
+      .social-book-btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.85rem;
+      }
+
+      /* Footer: more breathing room */
+      footer {
+        padding: 2.5rem 0;
+      }
+      .footer-pill {
+        padding: 0.55rem 1.3rem;
+        font-size: 0.8rem;
+      }
+
+      /* Price items a bit larger on desktop */
+      .price-item {
+        font-size: 0.95rem;
+        margin-bottom: 0.65rem;
+      }
+      .price-note {
+        font-size: 0.8rem;
+      }
+      .refill-note {
+        font-size: 0.8rem;
+        padding: 0.55rem 1rem;
+      }
+      .kids-highlight .price-title {
+        font-size: 1rem;
+      }
+      .coming-soon-note {
+        font-size: 1.2rem;
+      }
+    }
+
+    /* Extra-large desktop (1440px+) */
+    @media (min-width: 1440px) {
+      .container {
+        max-width: 1400px;
+      }
+      .hero-grid {
+        gap: 4.5rem;
+      }
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      .services-grid {
+        gap: 2rem;
+      }
+    }
   </style>
 </head>
 <body>
