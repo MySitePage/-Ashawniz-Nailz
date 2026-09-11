@@ -191,18 +191,17 @@
       display: inline-block;
     }
 
-    /* ---------- COMING SOON NOTE (under brow prices) ---------- */
-    .coming-soon-note {
-      margin-top: 0.8rem;
-      text-align: center;
+    /* ---------- COMING SOON BADGE (inline next to a price) ---------- */
+    .coming-soon-badge {
+      font-size: 0.7rem;
       font-weight: 800;
-      font-size: 1rem;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       background: linear-gradient(135deg, #b366ff, #ff99cc);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
+      margin-left: 0.3rem;
     }
 
     /* ---------- FAQ ---------- */
@@ -724,8 +723,8 @@
       .kids-highlight .price-title {
         font-size: 1rem;
       }
-      .coming-soon-note {
-        font-size: 1.2rem;
+      .coming-soon-badge {
+        font-size: 0.8rem;
       }
     }
 
@@ -871,13 +870,12 @@
             <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
           </div>
 
-          <!-- BROW MENU with prices + COMING SOON note -->
+          <!-- BROW MENU: Wax & Tint available, Lamination Coming Soon -->
           <div class="card">
             <h3>👁️ Brow Menu</h3>
             <div class="price-item highlight-item"><span class="price-title">Brow Wax</span><span>$15</span></div>
             <div class="price-item highlight-item"><span class="price-title">Brow Tint</span><span>$15</span></div>
-            <div class="price-item highlight-item"><span class="price-title">Brow Lamination</span><span>$45</span></div>
-            <div class="coming-soon-note">✨ Coming Soon ✨</div>
+            <div class="price-item highlight-item"><span class="price-title">Brow Lamination <span class="coming-soon-badge">— Coming Soon</span></span><span>$45</span></div>
           </div>
 
           <!-- NEW: SQUEEZE-IN FEE MENU -->
