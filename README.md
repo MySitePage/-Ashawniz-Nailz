@@ -38,6 +38,10 @@
       --highlight-pink-border: #f9a8d4;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       background: var(--page-bg-gradient);
@@ -72,7 +76,43 @@
       padding: 0 1.5rem;
     }
 
-    /* Highlight styles */
+    /* ---------- GLOBAL BUTTONS ---------- */
+    .btn-primary, .btn-secondary {
+      border-radius: var(--radius-pill);
+      padding: 0.8rem 1.6rem;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+      line-height: 1.2;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
+      color: var(--text-dark);
+      box-shadow: 0 12px 25px rgba(255, 179, 230, 0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 30px rgba(255, 179, 230, 0.5);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1.5px solid rgba(255, 179, 230, 0.7);
+      color: var(--text-dark);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 1);
+      border-color: var(--purple-medium);
+    }
+
+    /* ---------- HIGHLIGHT & SPECIAL STYLES ---------- */
     .highlight-purple {
       background: linear-gradient(135deg, var(--highlight-purple-bg), var(--highlight-pink-bg));
       border-left: 4px solid var(--highlight-purple-border);
@@ -116,7 +156,56 @@
       margin: 1rem 0;
       text-align: center;
     }
-    /* FAQ Section */
+    .refill-note {
+      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
+      border-radius: 16px;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+      margin-top: 0.3rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    .kids-highlight {
+      background: linear-gradient(135deg, #f0d4ff, #ffcce5);
+      border: 2px solid #c084fc;
+      border-radius: 20px;
+      padding: 0.5rem 0.8rem;
+      margin: 0.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(192, 132, 252, 0.3);
+    }
+    .kids-highlight .price-title {
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+    .kids-highlight span {
+      font-weight: 800;
+    }
+    .kids-badge {
+      background: #c084fc;
+      color: white;
+      border-radius: 40px;
+      padding: 0.2rem 0.7rem;
+      font-size: 0.65rem;
+      margin-left: 0.5rem;
+      display: inline-block;
+    }
+
+    /* ---------- COMING SOON NOTE (under brow prices) ---------- */
+    .coming-soon-note {
+      margin-top: 0.8rem;
+      text-align: center;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #b366ff, #ff99cc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* ---------- FAQ ---------- */
     .faq-section {
       margin-top: 1rem;
       background: rgba(255, 255, 255, 0.9);
@@ -153,47 +242,12 @@
     .faq-answer {
       color: var(--text-dark);
     }
-    .refill-note {
-      background: linear-gradient(135deg, #f3e8ff, #ffe4f3);
-      border-radius: 16px;
-      padding: 0.4rem 0.8rem;
-      font-size: 0.7rem;
-      margin-top: 0.3rem;
-      text-align: center;
-      font-weight: 500;
-    }
-    /* SUPER BOLD KIDS MANICURE NOTE */
-    .kids-highlight {
-      background: linear-gradient(135deg, #f0d4ff, #ffcce5);
-      border: 2px solid #c084fc;
-      border-radius: 20px;
-      padding: 0.5rem 0.8rem;
-      margin: 0.5rem 0;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(192, 132, 252, 0.3);
-    }
-    .kids-highlight .price-title {
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-    .kids-highlight span {
-      font-weight: 800;
-    }
-    .kids-badge {
-      background: #c084fc;
-      color: white;
-      border-radius: 40px;
-      padding: 0.2rem 0.7rem;
-      font-size: 0.65rem;
-      margin-left: 0.5rem;
-      display: inline-block;
-    }
 
-    /* ========== RESPONSIVE HEADER ========== */
+    /* ========== HEADER ========== */
     header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 100;
       backdrop-filter: blur(20px);
       background: linear-gradient(to right, rgba(255, 179, 230, 0.96), rgba(217, 179, 255, 0.96));
       border-bottom: 2px solid rgba(255, 255, 255, 0.8);
@@ -222,6 +276,7 @@
       background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
       box-shadow: 0 0 18px rgba(255, 179, 230, 0.6);
       border: 2px solid rgba(255, 255, 255, 0.9);
+      flex-shrink: 0;
     }
 
     .logo-text-main {
@@ -351,7 +406,7 @@
       .logo-text-sub { font-size: 0.55rem; }
     }
 
-    /* Hero */
+    /* ---------- HERO ---------- */
     .hero { padding: 2.5rem 0 2rem; }
     .hero-grid {
       display: grid;
@@ -398,47 +453,29 @@
       gap: 0.3rem;
     }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; }
-    .btn-primary, .btn-secondary {
-      border-radius: var(--radius-pill);
-      padding: 0.8rem 1.6rem;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      transition: all 0.25s ease;
-      cursor: pointer;
-    }
     @media (max-width: 550px) {
       .btn-primary, .btn-secondary { padding: 0.65rem 1.2rem; font-size: 0.7rem; }
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
-      color: var(--text-dark);
-      box-shadow: 0 12px 25px rgba(255, 179, 230, 0.4);
-    }
-    .btn-primary:hover { transform: translateY(-3px); }
-    .btn-secondary {
-      background: rgba(255, 255, 255, 0.88);
-      border: 1.5px solid rgba(255, 179, 230, 0.7);
-    }
     .hero-meta { font-size: 0.72rem; opacity: 0.85; }
 
-    /* Booking Card */
+    /* ---------- BOOKING CARD ---------- */
+    .booking-section {
+      padding: 2.5rem 0;
+    }
     .booking-card {
       background: rgba(255, 255, 255, 0.92);
       backdrop-filter: blur(18px);
       border-radius: 36px;
-      padding: 1.8rem;
+      padding: 2.5rem 1.8rem;
       box-shadow: 0 25px 45px rgba(255, 179, 230, 0.35);
       border: 2px solid rgba(255, 255, 255, 0.9);
       transition: all 0.3s ease;
       text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
     }
-    .booking-header { font-size: 1.3rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
-    .booking-sub { font-size: 0.8rem; color: var(--text-light); margin-bottom: 1.5rem; }
+    .booking-header { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+    .booking-sub { font-size: 0.85rem; color: var(--text-light); margin-bottom: 1.5rem; }
     .calendar-button-container { margin: 1rem 0; display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
     .calendar-link, .direct-booking-link {
       display: inline-flex;
@@ -459,6 +496,7 @@
       text-align: center;
     }
     .direct-booking-link { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+    .calendar-link:hover, .direct-booking-link:hover { transform: translateY(-3px); }
     .alt-booking { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid rgba(255, 179, 230, 0.4); }
     .alt-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-light); margin-bottom: 0.8rem; }
     .social-buttons { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
@@ -473,6 +511,7 @@
       font-weight: 600;
       border: 1px solid rgba(255, 179, 230, 0.6);
     }
+    .social-book-btn:hover { background: white; border-color: var(--purple-medium); }
     .deposit-note {
       background: linear-gradient(135deg, rgba(255, 230, 245, 0.7), rgba(230, 210, 255, 0.7));
       padding: 0.6rem;
@@ -482,7 +521,7 @@
       text-align: center;
     }
 
-    /* Sections */
+    /* ---------- SECTIONS & CARDS ---------- */
     section { padding: 2.5rem 0; }
     .section-heading { text-align: center; margin-bottom: 2rem; }
     .section-heading span.kicker { font-size: 0.72rem; letter-spacing: 0.2em; color: var(--text-light); display: block; margin-bottom: 0.3rem; }
@@ -532,28 +571,6 @@
     }
     .service-notes { margin-top: 0.8rem; padding: 0.6rem; background: rgba(255, 240, 250, 0.6); border-radius: 20px; font-size: 0.7rem; border-left: 3px solid var(--purple-medium); }
 
-    /* Gallery */
-    .gallery-strip { background: rgba(255, 255, 255, 0.85); border-radius: 28px; padding: 1.2rem; }
-    .gallery-track { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.8rem; }
-    .gallery-slide {
-      flex: 0 0 auto;
-      width: 180px;
-      aspect-ratio: 3 / 4;
-      border-radius: 24px;
-      overflow: hidden;
-      border: 3px solid rgba(255, 255, 255, 0.9);
-    }
-    .gallery-slide img { width: 100%; height: 100%; object-fit: cover; }
-    .gallery-btn {
-      border-radius: 60px;
-      border: 1.5px solid rgba(255, 179, 230, 0.7);
-      background: rgba(255, 255, 255, 0.9);
-      padding: 0.45rem 1.2rem;
-      font-size: 0.75rem;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
     footer {
       padding: 1.8rem 0;
       border-top: 2px solid rgba(255, 179, 230, 0.5);
@@ -562,6 +579,7 @@
     .footer-top, .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; }
     .footer-socials { display: flex; gap: 0.8rem; flex-wrap: wrap; }
     .footer-pill { padding: 0.4rem 1rem; border-radius: 60px; background: rgba(255, 255, 255, 0.85); font-size: 0.72rem; }
+    .footer-pill:hover { background: white; }
   </style>
 </head>
 <body>
@@ -576,12 +594,11 @@
             <div class="logo-text-sub">South Carolina Nail Tech</div>
           </div>
         </div>
-        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+        <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
         <div class="nav-links">
           <a href="#services">Services</a>
           <a href="#policies">Policies</a>
           <a href="#location">Location</a>
-          <a href="#gallery">Gallery</a>
           <a href="#booking" class="nav-btn"><span>💅🏾</span><span>Book Now</span></a>
         </div>
       </nav>
@@ -589,12 +606,13 @@
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
           <div class="eyebrow"><span class="eyebrow-dot"></span> SOUTH CAROLINA NAIL TECH</div>
           <h1>Nails done right. <span class="highlight">Every style. Every color. Every time.</span></h1>
-          <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, and custom designs for clients who want their nails to match their energy.</p>
+          <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, and custom designs for clients who want their nails to match their energy. Home-based salon in Florence, SC.</p>
           <div class="hero-badges">
             <div class="badge"><span class="badge-dot"></span> Registered Cosmetologist</div>
             <div class="badge"><span class="badge-dot"></span> Florence, SC Area</div>
@@ -604,12 +622,196 @@
             <a class="btn-secondary" href="#services"><span>👛</span><span>View price list</span></a>
           </div>
         </div>
-        <div class="booking-card" id="booking">
+        <div class="card" style="text-align:center; padding:2rem 1.5rem;">
+          <div style="font-size:2.5rem; margin-bottom:0.5rem;">💅🏾</div>
+          <h3 style="margin-bottom:0.8rem;">Ready to Book?</h3>
+          <p style="font-size:0.85rem; color:var(--text-light); margin-bottom:1.2rem;">Scroll down to the bottom of the page to read all policies and pricing, then book your appointment.</p>
+          <a href="#booking" class="btn-primary" style="width:100%; max-width:250px; margin:0 auto;">📆 Go to Booking</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION / ABOUT -->
+    <section id="location">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">About &amp; location</span>
+          <h2>Where to find Ashawniz Nailz</h2>
+        </div>
+        <div class="about-grid">
+          <div class="card">
+            <div class="policy-tag">💅🏾 Registered Cosmetologist</div>
+            <h3>The experience</h3>
+            <p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p>
+            <div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div>
+          </div>
+          <div class="card">
+            <div class="policy-tag">🏠 Home-Based Salon</div>
+            <h3>Service Area</h3>
+            <p>We are a <strong>home-based salon located in Florence, SC</strong>. The exact address will be sent to your message after your deposit is received, along with where to park your car.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES & PRICING -->
+    <section id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Services &amp; pricing</span>
+          <h2>Price list</h2>
+          <p>Deposits go toward total. Final balance accepted in cash.</p>
+        </div>
+        <div class="services-grid">
+          <div class="card">
+            <h3>💅 Acrylic Sets & Manicures</h3>
+            <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
+            <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
+            <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
+            <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$75</span></div>
+            <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
+            <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
+            <div class="price-item highlight-item"><span class="price-title">✨ Acrylic Charm/Design sets</span><span>$95</span></div>
+            <div class="kids-highlight">
+              <span class="price-title">👧 Kids Manicure (Ages 5-12 ONLY)</span>
+              <span style="font-weight:800; font-size:1rem;">$20</span>
+              <span class="kids-badge">⚠️ Ages 5-12 ONLY ⚠️</span>
+            </div>
+            <div class="price-note">✨ Charm/Design sets include unlimited charms & designs | No extra charge for length!</div>
+          </div>
+
+          <div class="card">
+            <h3>🦶 Pedicure Menu</h3>
+            <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
+            <p class="price-note">✨ Dry pedicure also available | Polish included</p>
+          </div>
+
+          <div class="card">
+            <h3>✍️ Add-Ons, Refills & Toes</h3>
+            <div class="price-item"><span class="price-title">Polish change</span><span>$18</span></div>
+            <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
+            <div class="price-item"><span class="price-title">Acrylic (Toes) Refill</span><span>$30</span></div>
+            <div class="refill-note">⚠️ Must have at least 5 toes still on for toe refill</div>
+            <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$45</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
+            <div class="refill-note">⚠️ Must have at least 4 nails on for nail refill</div>
+            <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
+            <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
+            <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
+            <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
+            <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
+            <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
+            <div class="price-item"><span>Soak Off</span><span>$15</span></div>
+            <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
+          </div>
+
+          <!-- BROW MENU with prices + COMING SOON note -->
+          <div class="card">
+            <h3>👁️ Brow Menu</h3>
+            <div class="price-item highlight-item"><span class="price-title">Brow Wax</span><span>$15</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Brow Tint</span><span>$15</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Brow Lamination</span><span>$45</span></div>
+            <div class="coming-soon-note">✨ Coming Soon ✨</div>
+          </div>
+
+          <!-- NEW: SQUEEZE-IN FEE MENU -->
+          <div class="card">
+            <h3>⏰ Squeeze-in Fee Policy</h3>
+            <p style="font-size:0.8rem; margin-bottom:0.8rem;">If you need to squeeze in a last-minute appointment, the following fees apply:</p>
+            <div class="price-item"><span class="price-title">Regular</span><span>$20</span></div>
+            <div class="price-item"><span class="price-title">Same-Day / Before Hours</span><span>$25</span></div>
+            <div class="price-item"><span class="price-title">After-Hours</span><span>$35</span></div>
+            <div class="price-item"><span class="price-title">Thursday (Off Day)</span><span>$40</span></div>
+            <div class="price-item"><span class="price-title">Same Day / Thursday</span><span>$45</span></div>
+            <div class="price-item"><span class="price-title">Thursday After Hours</span><span>$50</span></div>
+            <div class="price-item"><span class="price-title">Sunday / Day Off</span><span>$40</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Holiday</span><span>$60+</span></div>
+          </div>
+        </div>
+
+        <!-- FAQ SECTION -->
+        <div class="faq-section">
+          <h3>💬 Frequently Asked Questions 💬</h3>
+          <div class="faq-list">
+            <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Can I book without paying a deposit?</span><span class="faq-answer">No, to be fair to other loyal clients, everyone should follow the policy.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, the address will be sent straight to your message, along with where to park your car.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
+            <div class="faq-item"><span class="faq-question">❓ What does Design set include?</span><span class="faq-answer">Unlimited designs ONLY</span></div>
+            <div class="faq-item"><span class="faq-question">❓ What does Charm/Design set include?</span><span class="faq-answer">Unlimited charms AND unlimited designs</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Refill requirements?</span><span class="faq-answer">Nail refill: at least 4 nails on | Toe refill: at least 5 toes on</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POLICIES -->
+    <section id="policies">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Policies</span>
+          <h2>Before you book</h2>
+        </div>
+        <div class="policy-grid">
+          <div class="card">
+            <div><span class="policy-tag">Deposits</span><span class="policy-tag">Non-refundable</span></div>
+            <h3>Deposit Policy</h3>
+            <div class="policy-highlight">
+              <p><strong>⚠️ ALL DEPOSITS ARE NON-REFUNDABLE AND NON-TRANSFERABLE.</strong> If you cancel your appointment for ANY reason, a <strong>NEW deposit is required</strong> to book another appointment.</p>
+            </div>
+            <div class="warning-box">
+              <span class="big-bold">🚨 NO REFUNDS 🚨</span>
+              <p style="margin-top:0.3rem;">After a service is completed, you have <strong>48 HOURS</strong> to request changes for <strong>FREE</strong>. After 48 hours, you will have to pay full price for any fixes.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div><span class="policy-tag">Timing</span><span class="policy-tag">Late & No-Show</span></div>
+            <h3>Late Policy</h3>
+            <p>10-min grace period, after that <strong>$10 late fee</strong>. After 15 minutes, your appointment may be canceled and deposit forfeited.</p>
+            <div class="warning-box" style="margin-top:0.8rem;">
+              <strong>⚠️ I DO NOT ALLOW you to come with nails on already from a previous tech you've been to. YOU WILL BE DECLINED at your appointment.</strong>
+            </div>
+          </div>
+
+          <!-- NEW: 24-HOUR RESCHEDULE POLICY -->
+          <div class="card">
+            <div><span class="policy-tag">Rescheduling</span><span class="policy-tag">24-Hour Rule</span></div>
+            <h3>24-Hour Reschedule Policy</h3>
+            <p>You have <strong>24 hours</strong> to change your appointment time/date.</p>
+            <div class="warning-box" style="margin-top:0.8rem;">
+              <strong>⚠️ If you don't cancel within 24 hours, and you still want to change your appointment, you have to pay a Squeeze-in Fee.</strong>
+            </div>
+          </div>
+
+          <div class="card">
+            <div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div>
+            <h3>Prep & Payments</h3>
+            <p>Arrive with <strong>bare nails</strong> unless soak-off was booked. Remaining balance accepted in cash.</p>
+            <div class="service-notes" style="margin-top:0.8rem;"><p><strong>👧 Kids Manicure:</strong> Ages 5-12 years old only. Parent/guardian must be present.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING SECTION (MOVED TO THE BOTTOM) -->
+    <section class="booking-section" id="booking">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Ready to book?</span>
+          <h2>Book Your Appointment</h2>
+          <p>Read everything above, then schedule your nail appointment below.</p>
+        </div>
+        <div class="booking-card">
           <div class="booking-header"><span>📅</span><span>Book Direct Appointment</span></div>
           <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
           <div class="calendar-button-container">
             <div id="google-calendar-btn"></div>
-            <!-- REPLACED BOOKING LINK -->
             <a href="https://calendar.app.google/meNdHchW6ueV8aKn9" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
           </div>
           <script>
@@ -627,127 +829,40 @@
             })();
           </script>
           <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — Non-refundable & non-transferable. Deposits go towards final total!</div>
-          <div class="alt-booking"><div class="alt-title">✨ Or book via social media ✨</div><div class="social-buttons"><a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" class="social-book-btn">📲 TikTok DM</a><a href="https://instagram.com/ashawniz.nailz" target="_blank" class="social-book-btn">📸 Instagram DM</a></div></div>
+          <div class="alt-booking">
+            <div class="alt-title">✨ Or book via social media ✨</div>
+            <div class="social-buttons">
+              <a href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" class="social-book-btn" rel="noopener">📲 TikTok DM</a>
+              <a href="https://instagram.com/ashawniz.nailz" target="_blank" class="social-book-btn" rel="noopener">📸 Instagram DM</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-
-    <section id="location"><div class="container"><div class="section-heading"><span class="kicker">About &amp; location</span><h2>Where to find Ashawniz Nailz</h2></div><div class="about-grid"><div class="card"><div class="policy-tag">💅🏾 Registered Cosmetologist</div><h3>The experience</h3><p>Personalized appointments. Bring your inspo, ideas, or vibe — together we create your perfect set.</p><div class="service-notes"><p><strong>📝 For Acrylic Nails:</strong> Charm sets = unlimited charms | Design sets = unlimited designs | Combo = unlimited both</p></div></div><div class="card"><div class="policy-tag">📍 Florence, SC area</div><h3>Service Area</h3><p>Based in Florence, SC.</p></div></div></div></section>
-
-    <section id="services"><div class="container">
-      <div class="section-heading"><span class="kicker">Services &amp; pricing</span><h2>Price list</h2><p>Deposits go toward total. Final balance accepted in cash.</p></div>
-      <div class="services-grid">
-        <div class="card">
-          <h3>💅 Acrylic Sets & Manicures</h3>
-          <!-- Sorted least to greatest -->
-          <div class="price-item"><span class="price-title">Basic Manicure</span><span>$50</span></div>
-          <div class="price-item"><span class="price-title">Design Manicure</span><span>$60</span></div>
-          <div class="price-item"><span class="price-title">Fullset Acrylic</span><span>$70</span></div>
-          <div class="price-item"><span class="price-title">Charm/Design Manicure</span><span>$75</span></div>
-          <div class="price-item"><span class="price-title">Acrylic Charm sets</span><span>$90</span></div>
-          <div class="price-item"><span class="price-title">Acrylic Design sets</span><span>$90</span></div>
-          <div class="price-item highlight-item"><span class="price-title">✨ Acrylic Charm/Design sets</span><span>$95</span></div>
-          <!-- SUPER BOLD KIDS MANICURE - HIGHLIGHTED IN PINK/PURPLE -->
-          <div class="kids-highlight">
-            <span class="price-title">👧 Kids Manicure (Ages 5-12 ONLY)</span>
-            <span style="font-weight:800; font-size:1rem;">$20</span>
-            <span class="kids-badge">⚠️ Ages 5-12 ONLY ⚠️</span>
-          </div>
-          <div class="price-note">✨ Charm/Design sets include unlimited charms & designs | No extra charge for length!</div>
-        </div>
-        <div class="card">
-          <h3>🦶 Pedicure Menu <span class="price-highlight">(UPDATED PRICES)</span></h3>
-          <!-- Sorted least to greatest -->
-          <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
-          <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
-          <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
-          <p class="price-note">✨ Dry pedicure also available | Polish included</p>
-          <div class="service-notes"><p><strong>📝 French Tip Special (June 1 – July 10):</strong> Classic Pedicure + Fullset French Tips + Toes French tips = $90 (was $180)</p></div>
-        </div>
-        <div class="card">
-          <h3>✍️ Add-Ons, Refills & Toes</h3>
-          <!-- Sorted least to greatest -->
-          <div class="price-item"><span class="price-title">Polish change</span><span>$18</span></div>
-          <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
-          <div class="price-item"><span class="price-title">Acrylic (Toes) Refill</span><span>$30</span></div>
-          <div class="refill-note">⚠️ Must have at least 5 toes still on for toe refill</div>
-          <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$35</span></div>
-          <div class="price-item highlight-item"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
-          <div class="refill-note">⚠️ Must have at least 4 nails on for nail refill</div>
-          <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
-          <div class="price-item"><span>Fullsets (Toes)</span><span>$65</span></div>
-          <div class="price-item"><span>Design Fullsets (Toes)</span><span>$70</span></div>
-          <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
-          <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
-          <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
-          <div class="price-item"><span>Soak Off</span><span>$15</span></div>
-          <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
-        </div>
-      </div>
-      
-      <!-- FAQ SECTION - Most clients ask these questions -->
-      <div class="faq-section">
-        <h3>💬 Frequently Asked Questions 💬</h3>
-        <div class="faq-list">
-          <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
-          <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
-          <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
-          <div class="faq-item"><span class="faq-question">❓ What does Design set include?</span><span class="faq-answer">Unlimited designs ONLY</span></div>
-          <div class="faq-item"><span class="faq-question">❓ What does Charm/Design set include?</span><span class="faq-answer">Unlimited charms AND unlimited designs</span></div>
-          <div class="faq-item"><span class="faq-question">❓ Refill requirements?</span><span class="faq-answer">Nail refill: at least 4 nails on | Toe refill: at least 5 toes on</span></div>
-        </div>
-      </div>
-    </div></section>
-
-    <section id="policies"><div class="container">
-      <div class="section-heading"><span class="kicker">Policies</span><h2>Before you book</h2></div>
-      <div class="policy-grid">
-        <div class="card">
-          <div><span class="policy-tag">Deposits</span><span class="policy-tag">Non-refundable</span></div>
-          <h3>Deposit Policy</h3>
-          <div class="policy-highlight">
-            <p><strong>⚠️ ALL DEPOSITS ARE NON-REFUNDABLE AND NON-TRANSFERABLE.</strong> If you cancel your appointment for ANY reason, a <strong>NEW deposit is required</strong> to book another appointment.</p>
-          </div>
-          <div class="warning-box">
-            <span class="big-bold">🚨 NO REFUNDS 🚨</span>
-            <p style="margin-top:0.3rem;">After a service is completed, you have <strong>48 HOURS</strong> to request changes for <strong>FREE</strong>. After 48 hours, you will have to pay full price for any fixes.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div><span class="policy-tag">Timing</span><span class="policy-tag">Late & No-Show</span></div>
-          <h3>Late Policy</h3>
-          <p>10-min grace period, after that <strong>$10 late fee</strong>. After 15 minutes, your appointment may be canceled and deposit forfeited.</p>
-          <div class="warning-box" style="margin-top:0.8rem;">
-            <strong>⚠️ I DO NOT ALLOW you to come with nails on already from a previous tech you've been to. YOU WILL BE DECLINED at your appointment.</strong>
-          </div>
-        </div>
-        <div class="card">
-          <div><span class="policy-tag">Nail prep</span><span class="policy-tag">Payments</span></div>
-          <h3>Prep & Payments</h3>
-          <p>Arrive with <strong>bare nails</strong> unless soak-off was booked. Remaining balance accepted in cash.</p>
-          <div class="service-notes" style="margin-top:0.8rem;"><p><strong>👧 Kids Manicure:</strong> Ages 5-12 years old only. Parent/guardian must be present.</p></div>
-        </div>
-      </div>
-    </div></section>
-
-    <section id="gallery"><div class="container">
-      <div class="section-heading"><span class="kicker">Client work</span><h2>Gallery preview</h2><p>Swipe to see recent sets by Ashawniz Nailz.</p></div>
-      <div class="card"><div class="gallery-strip"><div class="gallery-track" id="galleryTrack"><div class="gallery-slide"><img src="https://i.postimg.cc/ZqYtzPjx/IMG-7932.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/ZqYtzPjP/IMG-7936.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/R0C5x1Gw/IMG-7937.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/XvNS6KxF/IMG-7938.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/tgRQGdDx/IMG-7939.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/q7BVHcQh/IMG-7940.jpg" alt="Nail set"></div><div class="gallery-slide"><img src="https://i.postimg.cc/R0C5x1GS/IMG-7941.jpg" alt="Nail set"></div></div><div class="gallery-controls" style="display:flex; justify-content:space-between; margin-top:0.9rem;"><span style="font-size:0.7rem;">← → swipe or click arrows</span><div><button class="gallery-btn" id="galleryPrev">← Prev</button><button class="gallery-btn" id="galleryNext" style="margin-left:0.6rem;">Next →</button></div></div></div></div>
-    </div></section>
   </main>
 
   <footer>
     <div class="container">
       <div class="footer-top">
-        <div><div class="logo-text-main" style="font-size:1.1rem;">Ashawniz Nailz</div><div class="logo-text-sub">South Carolina Nail Tech · Pink & Purple Vibes</div></div>
-        <div class="footer-socials"><a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank">TikTok · @ashawniz.nailz</a><a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank">Instagram · @ashawniz.nailz</a></div>
+        <div>
+          <div class="logo-text-main" style="font-size:1.1rem;">Ashawniz Nailz</div>
+          <div class="logo-text-sub">South Carolina Nail Tech · Pink & Purple Vibes</div>
+        </div>
+        <div class="footer-socials">
+          <a class="footer-pill" href="https://www.tiktok.com/@ashawniz.nailz" target="_blank" rel="noopener">TikTok · @ashawniz.nailz</a>
+          <a class="footer-pill" href="https://instagram.com/ashawniz.nailz" target="_blank" rel="noopener">Instagram · @ashawniz.nailz</a>
+        </div>
       </div>
-      <div class="footer-bottom"><span>Book directly via Google Calendar or DM. Based in Florence, SC. © Ashawniz Nailz</span></div>
+      <div class="footer-bottom">
+        <span>Book directly via Google Calendar or DM. Home-based salon in Florence, SC. © Ashawniz Nailz</span>
+      </div>
     </div>
   </footer>
 </div>
+
 <script>
   (function() {
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener("click", function(e) {
         const targetId = this.getAttribute("href");
@@ -761,14 +876,6 @@
         }
       });
     });
-    const track = document.getElementById("galleryTrack");
-    const prev = document.getElementById("galleryPrev");
-    const next = document.getElementById("galleryNext");
-    if (track && prev && next) {
-      const getScrollAmount = () => { const slide = track.querySelector(".gallery-slide"); return slide ? slide.offsetWidth + 12 : 200; };
-      prev.addEventListener("click", () => track.scrollBy({ left: -getScrollAmount(), behavior: "smooth" }));
-      next.addEventListener("click", () => track.scrollBy({ left: getScrollAmount(), behavior: "smooth" }));
-    }
   })();
 </script>
 </body>
