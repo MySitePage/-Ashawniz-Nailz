@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes" />
   <title>Ashawniz Nailz | South Carolina Nail Tech</title>
-  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, and mobile services in Florence, SC area. Book directly via Google Calendar." />
+  <meta name="description" content="Ashawniz Nailz — registered cosmetologist in South Carolina. Acrylic sets, pedicures, custom designs, press-ons, and mobile services in Florence, SC area. Book directly via Google Calendar." />
   <meta property="og:title" content="Ashawniz Nailz | Book Your Appointment" />
-  <meta property="og:description" content="Professional nail tech in South Carolina. Acrylic sets, pedicures, custom designs. Book online!" />
+  <meta property="og:description" content="Professional nail tech in South Carolina. Acrylic sets, pedicures, custom designs, press-ons. Book online!" />
   <meta property="og:type" content="website" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
@@ -112,6 +112,17 @@
       border-color: var(--purple-medium);
     }
 
+    /* Press-on CTA button (shop link) */
+    .btn-press-on {
+      background: linear-gradient(135deg, #b366ff, #ff99cc);
+      color: #ffffff;
+      box-shadow: 0 12px 25px rgba(179, 102, 255, 0.4);
+    }
+    .btn-press-on:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 30px rgba(179, 102, 255, 0.5);
+    }
+
     /* ---------- HIGHLIGHT & SPECIAL STYLES ---------- */
     .highlight-purple {
       background: linear-gradient(135deg, var(--highlight-purple-bg), var(--highlight-pink-bg));
@@ -202,6 +213,84 @@
       background-clip: text;
       color: transparent;
       margin-left: 0.3rem;
+    }
+
+    /* ---------- PRESS-ON SECTION STYLES ---------- */
+    .press-on-hero {
+      background: linear-gradient(135deg, rgba(255, 240, 250, 0.9), rgba(240, 220, 255, 0.9));
+      border-radius: 28px;
+      padding: 2rem 1.8rem;
+      border: 2px solid rgba(192, 132, 252, 0.4);
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .press-on-hero h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #b366ff, #ff99cc);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .press-on-hero p {
+      font-size: 0.9rem;
+      color: var(--text-light);
+      margin-bottom: 1.2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .press-on-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: linear-gradient(135deg, #8e44ad, #9b59b6);
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: all 0.25s ease;
+      box-shadow: 0 12px 25px rgba(142, 68, 173, 0.35);
+      border: none;
+      cursor: pointer;
+    }
+    .press-on-cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 35px rgba(142, 68, 173, 0.45);
+    }
+    .press-on-info-grid {
+      display: grid;
+      gap: 1.3rem;
+      grid-template-columns: 1fr;
+      margin-top: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .press-on-info-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (min-width: 1025px) {
+      .press-on-info-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.8rem;
+      }
+      .press-on-hero {
+        padding: 3rem 2.5rem;
+      }
+      .press-on-hero h3 {
+        font-size: 2rem;
+      }
+      .press-on-hero p {
+        font-size: 1rem;
+      }
+      .press-on-cta {
+        padding: 1.2rem 2.8rem;
+        font-size: 1.05rem;
+      }
     }
 
     /* ---------- FAQ ---------- */
@@ -582,7 +671,6 @@
 
     /* ============================================ */
     /* DESKTOP-FRIENDLY ENHANCEMENTS (1025px+)      */
-    /* Mobile optimization is fully preserved below */
     /* ============================================ */
     @media (min-width: 1025px) {
       .container {
@@ -590,18 +678,15 @@
         padding: 0 2.5rem;
       }
 
-      /* More breathing room on large screens */
       section { padding: 3.5rem 0; }
       .hero { padding: 3.5rem 0 3rem; }
 
-      /* Hero grid: give the text side more room */
       .hero-grid {
         grid-template-columns: 1.5fr 1fr;
         gap: 3.5rem;
         align-items: center;
       }
 
-      /* Larger hero text on desktop */
       .hero h1 {
         font-size: 3.2rem;
       }
@@ -613,18 +698,15 @@
         gap: 1rem;
       }
 
-      /* Larger buttons on desktop */
       .btn-primary, .btn-secondary {
         padding: 0.95rem 1.9rem;
         font-size: 0.85rem;
       }
 
-      /* Side info card in hero gets more padding */
       .hero-grid > .card {
         padding: 2.8rem 2rem;
       }
 
-      /* Section headings bigger on desktop */
       .section-heading h2 {
         font-size: 2.1rem;
       }
@@ -632,7 +714,6 @@
         margin-bottom: 2.5rem;
       }
 
-      /* Services & Policy grids: 3 columns with more gap */
       .services-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.8rem;
@@ -646,13 +727,11 @@
         gap: 1.8rem;
       }
 
-      /* Cards get a touch more padding */
       .card {
         padding: 1.8rem;
         border-radius: 30px;
       }
 
-      /* FAQ gets more room */
       .faq-section {
         padding: 2rem;
         border-radius: 30px;
@@ -669,7 +748,6 @@
         min-width: 200px;
       }
 
-      /* Booking section: bigger and wider */
       .booking-section {
         padding: 4rem 0;
       }
@@ -699,7 +777,6 @@
         font-size: 0.85rem;
       }
 
-      /* Footer: more breathing room */
       footer {
         padding: 2.5rem 0;
       }
@@ -708,7 +785,6 @@
         font-size: 0.8rem;
       }
 
-      /* Price items a bit larger on desktop */
       .price-item {
         font-size: 0.95rem;
         margin-bottom: 0.65rem;
@@ -728,7 +804,6 @@
       }
     }
 
-    /* Extra-large desktop (1440px+) */
     @media (min-width: 1440px) {
       .container {
         max-width: 1400px;
@@ -760,6 +835,7 @@
         <button class="nav-toggle" aria-label="Menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
         <div class="nav-links">
           <a href="#services">Services</a>
+          <a href="#press-ons">Press-Ons</a>
           <a href="#policies">Policies</a>
           <a href="#location">Location</a>
           <a href="#booking" class="nav-btn"><span>💅🏾</span><span>Book Now</span></a>
@@ -775,7 +851,7 @@
         <div>
           <div class="eyebrow"><span class="eyebrow-dot"></span> SOUTH CAROLINA NAIL TECH</div>
           <h1>Nails done right. <span class="highlight">Every style. Every color. Every time.</span></h1>
-          <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, and custom designs for clients who want their nails to match their energy. Home-based salon in Florence, SC.</p>
+          <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, custom designs, and press-ons for clients who want their nails to match their energy. Home-based salon in Florence, SC.</p>
           <div class="hero-badges">
             <div class="badge"><span class="badge-dot"></span> Registered Cosmetologist</div>
             <div class="badge"><span class="badge-dot"></span> Florence, SC Area</div>
@@ -783,6 +859,7 @@
           <div class="hero-actions">
             <a class="btn-primary" href="#booking"><span>📅</span><span>Book via Calendar</span></a>
             <a class="btn-secondary" href="#services"><span>👛</span><span>View price list</span></a>
+            <a class="btn-press-on" href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer"><span>💌</span><span>Shop Press-Ons</span></a>
           </div>
         </div>
         <div class="card" style="text-align:center; padding:2rem 1.5rem;">
@@ -892,8 +969,62 @@
             <div class="price-item highlight-item"><span class="price-title">Holiday</span><span>$60+</span></div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- FAQ SECTION -->
+    <!-- ============================================ -->
+    <!-- PRESS-ONS SECTION (NEW)                       -->
+    <!-- ============================================ -->
+    <section id="press-ons">
+      <div class="container">
+        <div class="section-heading">
+          <span class="kicker">Shop by mail</span>
+          <h2>💌 Press-Ons 💌</h2>
+          <p>Custom press-on sets made just for you — shipped or picked up locally!</p>
+        </div>
+
+        <div class="press-on-hero">
+          <h3>Ready to Shop Press-Ons?</h3>
+          <p>Fill out our quick order form to get started with your custom press-on set. Choose your style, size, and shipping preference!</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Open Press-On Order Form</a>
+        </div>
+
+        <div class="press-on-info-grid">
+          <!-- PRESS-ON PRICES -->
+          <div class="card">
+            <h3>💅 Press-On Prices</h3>
+            <div class="price-item"><span class="price-title">Basic</span><span>$35 – $45</span></div>
+            <div class="refill-note">No charms, just basic French or simple design | Short nails only</div>
+            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Freestyle</span><span>$50 – $65</span></div>
+            <div class="refill-note">Nail tech's choice | Medium or short set only</div>
+            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Custom Set</span><span>$65 – $80</span></div>
+            <div class="refill-note">Any set you would like | Length goes up to long only</div>
+          </div>
+
+          <!-- SHIPPING + ADD-ONS -->
+          <div class="card">
+            <h3>📦 Shipping & Add-Ons</h3>
+            <div class="price-item"><span class="price-title">Standard Shipping</span><span>$8</span></div>
+            <div class="price-item"><span class="price-title">Fast Shipping</span><span>$15</span></div>
+            <div class="price-item"><span class="price-title">Local Pickup</span><span>Free</span></div>
+            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Application Appts</span><span>$15</span></div>
+            <div class="price-item"><span class="price-title">Sizing Kits</span><span>$5</span></div>
+            <div class="price-item highlight-item"><span class="price-title">XL</span><span>$10</span></div>
+            <div class="price-item highlight-item"><span class="price-title">XXL</span><span>$15</span></div>
+            <div class="price-item highlight-item"><span class="price-title">XXXL</span><span>$20</span></div>
+          </div>
+        </div>
+
+        <!-- Press-On CTA again at the bottom of section -->
+        <div style="text-align:center; margin-top:2rem;">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Shop Press-Ons Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" style="padding-top:0;">
+      <div class="container">
         <div class="faq-section">
           <h3>💬 Frequently Asked Questions 💬</h3>
           <div class="faq-list">
