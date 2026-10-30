@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -670,7 +670,7 @@
     .footer-pill:hover { background: white; }
 
     /* ============================================ */
-    /* DESKTOP-FRIENDLY ENHANCEMENTS (1025px+)      */
+    /* DESKTOP-FRIENDLY ENHANCEMENTS (2000px+)      */
     /* ============================================ */
     @media (min-width: 1025px) {
       .container {
@@ -888,7 +888,7 @@
           <div class="card">
             <div class="policy-tag">🏠 Home-Based Salon</div>
             <h3>Service Area</h3>
-            <p>We are a <strong>home-based salon located in Florence, SC</strong>. The exact address will be sent to your message after your deposit is received, along with where to park your car.</p>
+            <p>We are a <strong>home-based salon located in Florence, SC</strong>. The exact address will be sent to your email after your deposit is received, along with where to park your car.</p>
           </div>
         </div>
       </div>
@@ -947,7 +947,6 @@
             <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
           </div>
 
-          <!-- BROW MENU: Wax & Tint available, Lamination Coming Soon -->
           <div class="card">
             <h3>👁️ Brow Menu</h3>
             <div class="price-item highlight-item"><span class="price-title">Brow Wax</span><span>$15</span></div>
@@ -955,7 +954,6 @@
             <div class="price-item highlight-item"><span class="price-title">Brow Lamination <span class="coming-soon-badge">— Coming Soon</span></span><span>$45</span></div>
           </div>
 
-          <!-- NEW: SQUEEZE-IN FEE MENU -->
           <div class="card">
             <h3>⏰ Squeeze-in Fee Policy</h3>
             <p style="font-size:0.8rem; margin-bottom:0.8rem;">If you need to squeeze in a last-minute appointment, the following fees apply:</p>
@@ -972,9 +970,7 @@
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- PRESS-ONS SECTION (NEW)                       -->
-    <!-- ============================================ -->
+    <!-- PRESS-ONS SECTION -->
     <section id="press-ons">
       <div class="container">
         <div class="section-heading">
@@ -990,7 +986,6 @@
         </div>
 
         <div class="press-on-info-grid">
-          <!-- PRESS-ON PRICES -->
           <div class="card">
             <h3>💅 Press-On Prices</h3>
             <div class="price-item"><span class="price-title">Basic</span><span>$35 – $45</span></div>
@@ -1001,7 +996,6 @@
             <div class="refill-note">Any set you would like | Length goes up to long only</div>
           </div>
 
-          <!-- SHIPPING + ADD-ONS -->
           <div class="card">
             <h3>📦 Shipping & Add-Ons</h3>
             <div class="price-item"><span class="price-title">Standard Shipping</span><span>$8</span></div>
@@ -1015,7 +1009,6 @@
           </div>
         </div>
 
-        <!-- Press-On CTA again at the bottom of section -->
         <div style="text-align:center; margin-top:2rem;">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Shop Press-Ons Now</a>
         </div>
@@ -1031,7 +1024,8 @@
             <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book without paying a deposit?</span><span class="faq-answer">No, to be fair to other loyal clients, everyone should follow the policy.</span></div>
-            <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, the address will be sent straight to your message, along with where to park your car.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Can I pay in full?</span><span class="faq-answer">No. You only pay the $20 deposit upfront; the rest is due in cash at your appointment. All additional appointment info is sent through email ONLY.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, the address will be sent straight to your EMAIL, along with where to park your car.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
             <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
             <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
@@ -1072,13 +1066,24 @@
             </div>
           </div>
 
-          <!-- NEW: 24-HOUR RESCHEDULE POLICY -->
           <div class="card">
             <div><span class="policy-tag">Rescheduling</span><span class="policy-tag">24-Hour Rule</span></div>
             <h3>24-Hour Reschedule Policy</h3>
             <p>You have <strong>24 hours</strong> to change your appointment time/date.</p>
             <div class="warning-box" style="margin-top:0.8rem;">
               <strong>⚠️ If you don't cancel within 24 hours, and you still want to change your appointment, you have to pay a Squeeze-in Fee.</strong>
+            </div>
+          </div>
+
+          <!-- NEW: DEPOSIT ONLY / EMAIL ONLY POLICY -->
+          <div class="card">
+            <div><span class="policy-tag">Payment</span><span class="policy-tag">Email Only</span></div>
+            <h3>Deposit Only — No Full Payment</h3>
+            <div class="policy-highlight">
+              <p><strong>⚠️ YOU CANNOT PAY IN FULL.</strong> Only the <strong>$20 deposit</strong> is paid upfront to secure your appointment. The remaining balance is paid in cash at your appointment.</p>
+            </div>
+            <div class="warning-box">
+              <strong>📧 ALL ADDITIONAL APPOINTMENT INFO IS SENT THROUGH EMAIL ONLY.</strong> Address, parking details, and any other appointment information will be sent to your email — not through text or DMs.
             </div>
           </div>
 
@@ -1092,7 +1097,7 @@
       </div>
     </section>
 
-    <!-- BOOKING SECTION (MOVED TO THE BOTTOM) -->
+    <!-- BOOKING SECTION -->
     <section class="booking-section" id="booking">
       <div class="container">
         <div class="section-heading">
@@ -1102,7 +1107,7 @@
         </div>
         <div class="booking-card">
           <div class="booking-header"><span>📅</span><span>Book Direct Appointment</span></div>
-          <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
+          <div class="booking-sub">Schedule instantly with my calendar. Pay only the $20 deposit — no full payment. All appointment details are sent via email ONLY.</div>
           <div class="calendar-button-container">
             <div id="google-calendar-btn"></div>
             <a href="https://calendar.app.google/meNdHchW6ueV8aKn9" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
@@ -1121,7 +1126,7 @@
               }
             })();
           </script>
-          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — Non-refundable & non-transferable. Deposits go towards final total!</div>
+          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — You cannot pay in full. Deposit is non-refundable & non-transferable and goes toward your final total. <strong>All additional appointment info is sent through email ONLY.</strong></div>
           <div class="alt-booking">
             <div class="alt-title">✨ Or book via social media ✨</div>
             <div class="social-buttons">
