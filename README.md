@@ -292,6 +292,20 @@
         font-size: 1.05rem;
       }
     }
+    
+    /* Notice for updated form */
+    .form-update-notice {
+      display: inline-block;
+      background: #fff3cd;
+      color: #856404;
+      border: 1px solid #ffeeba;
+      border-radius: 12px;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
 
     /* ---------- FAQ ---------- */
     .faq-section {
@@ -670,7 +684,7 @@
     .footer-pill:hover { background: white; }
 
     /* ============================================ */
-    /* DESKTOP-FRIENDLY ENHANCEMENTS (2000px+)      */
+    /* DESKTOP-FRIENDLY ENHANCEMENTS (1025px+)      */
     /* ============================================ */
     @media (min-width: 1025px) {
       .container {
@@ -888,7 +902,7 @@
           <div class="card">
             <div class="policy-tag">🏠 Home-Based Salon</div>
             <h3>Service Area</h3>
-            <p>We are a <strong>home-based salon located in Florence, SC</strong>. The exact address will be sent to your email after your deposit is received, along with where to park your car.</p>
+            <p>We are a <strong>home-based salon located in Florence, SC</strong>. The exact address will be sent to your message after your deposit is received, along with where to park your car.</p>
           </div>
         </div>
       </div>
@@ -947,6 +961,7 @@
             <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
           </div>
 
+          <!-- BROW MENU: Wax & Tint available, Lamination Coming Soon -->
           <div class="card">
             <h3>👁️ Brow Menu</h3>
             <div class="price-item highlight-item"><span class="price-title">Brow Wax</span><span>$15</span></div>
@@ -954,6 +969,7 @@
             <div class="price-item highlight-item"><span class="price-title">Brow Lamination <span class="coming-soon-badge">— Coming Soon</span></span><span>$45</span></div>
           </div>
 
+          <!-- SQUEEZE-IN FEE MENU -->
           <div class="card">
             <h3>⏰ Squeeze-in Fee Policy</h3>
             <p style="font-size:0.8rem; margin-bottom:0.8rem;">If you need to squeeze in a last-minute appointment, the following fees apply:</p>
@@ -970,45 +986,75 @@
       </div>
     </section>
 
-    <!-- PRESS-ONS SECTION -->
+    <!-- ============================================ -->
+    <!-- UPDATED PRESS-ONS SECTION                     -->
+    <!-- ============================================ -->
     <section id="press-ons">
       <div class="container">
         <div class="section-heading">
           <span class="kicker">Shop by mail</span>
-          <h2>💌 Press-Ons 💌</h2>
-          <p>Custom press-on sets made just for you — shipped or picked up locally!</p>
+          <h2>💌 Press-On Nails + Toes Bundles 💌</h2>
+          <p>Handmade, made-to-order sets shipped to your door — or picked up locally!</p>
         </div>
 
         <div class="press-on-hero">
           <h3>Ready to Shop Press-Ons?</h3>
-          <p>Fill out our quick order form to get started with your custom press-on set. Choose your style, size, and shipping preference!</p>
+          <p>Fill out our quick order form to get started. Nails and toes must be purchased together.</p>
+          <div class="form-update-notice">
+            ⚠️ Order form updated: Now includes Bundle Options & $20 Deposit requirement!
+          </div><br>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Open Press-On Order Form</a>
         </div>
 
         <div class="press-on-info-grid">
+          <!-- NEW PRESS-ON BUNDLE PRICES -->
           <div class="card">
-            <h3>💅 Press-On Prices</h3>
-            <div class="price-item"><span class="price-title">Basic</span><span>$35 – $45</span></div>
-            <div class="refill-note">No charms, just basic French or simple design | Short nails only</div>
-            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Freestyle</span><span>$50 – $65</span></div>
-            <div class="refill-note">Nail tech's choice | Medium or short set only</div>
-            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Custom Set</span><span>$65 – $80</span></div>
-            <div class="refill-note">Any set you would like | Length goes up to long only</div>
+            <h3>💅 Bundle Pricing</h3>
+            <p style="font-size:0.8rem; margin-bottom:1rem;">Each bundle includes BOTH a press-on fingernail set and a press-on toenail set.</p>
+            <div class="price-item"><span class="price-title">Basic Bundle</span><span>$55 – $65</span></div>
+            <div class="refill-note">Basic French or simple design</div>
+            
+            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Freestyle Bundle</span><span>$70 – $85</span></div>
+            <div class="refill-note">Nail tech's choice design</div>
+            
+            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Signature Duo</span><span>$85 – $100</span></div>
+            <div class="refill-note">Fully custom design</div>
+            
+            <div class="warning-box" style="margin-top:1.5rem; margin-bottom:0;">
+              <strong>⚠️ Deposit Required</strong>
+              <p style="margin-top:0.3rem;">A <strong>$20 deposit</strong> is required to place an order. The deposit goes toward your total. Orders will not be started until the deposit is received.</p>
+            </div>
           </div>
 
+          <!-- SHIPPING & PICKUP -->
           <div class="card">
-            <h3>📦 Shipping & Add-Ons</h3>
+            <h3>📦 Shipping & Pickup</h3>
             <div class="price-item"><span class="price-title">Standard Shipping</span><span>$8</span></div>
             <div class="price-item"><span class="price-title">Fast Shipping</span><span>$15</span></div>
             <div class="price-item"><span class="price-title">Local Pickup</span><span>Free</span></div>
-            <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Application Appts</span><span>$15</span></div>
-            <div class="price-item"><span class="price-title">Sizing Kits</span><span>$5</span></div>
-            <div class="price-item highlight-item"><span class="price-title">XL</span><span>$10</span></div>
-            <div class="price-item highlight-item"><span class="price-title">XXL</span><span>$15</span></div>
-            <div class="price-item highlight-item"><span class="price-title">XXXL</span><span>$20</span></div>
+            
+            <div class="service-notes" style="margin-top:1rem;">
+              <p><strong>Please Note:</strong> Shipping fees are separate from bundle prices. Remaining balances must be paid before shipping or pickup.</p>
+            </div>
+          </div>
+
+          <!-- PRESS-ON RULES & POLICIES -->
+          <div class="card" style="grid-column: 1 / -1; margin-top: 0.5rem;">
+            <h3>📜 Press-On Rules & Policies</h3>
+            <ul style="margin-left: 1.2rem; font-size: 0.85rem; line-height: 1.6; color: var(--text-dark);">
+              <li style="margin-bottom: 0.4rem;">Nails and toes must be purchased together when ordering a bundle.</li>
+              <li style="margin-bottom: 0.4rem;">Clients must provide accurate nail sizing before their order is made.</li>
+              <li style="margin-bottom: 0.4rem;">Clients may submit inspiration pictures for custom designs.</li>
+              <li style="margin-bottom: 0.4rem;">Freestyle designs are chosen at the nail technician's discretion.</li>
+              <li style="margin-bottom: 0.4rem;">All press-on sets are handmade and made to order.</li>
+              <li style="margin-bottom: 0.4rem;">Remaining balances must be paid before shipping or pickup.</li>
+              <li style="margin-bottom: 0.4rem;">Shipping fees are separate.</li>
+              <li><strong>All completed custom orders are final. No returns or exchanges.</strong></li>
+            </ul>
           </div>
         </div>
 
+        <!-- Press-On CTA again at the bottom of section -->
         <div style="text-align:center; margin-top:2rem;">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Shop Press-Ons Now</a>
         </div>
@@ -1024,8 +1070,8 @@
             <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book without paying a deposit?</span><span class="faq-answer">No, to be fair to other loyal clients, everyone should follow the policy.</span></div>
-            <div class="faq-item"><span class="faq-question">❓ Can I pay in full?</span><span class="faq-answer">No. You only pay the $20 deposit upfront; the rest is due in cash at your appointment. All additional appointment info is sent through email ONLY.</span></div>
-            <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, the address will be sent straight to your EMAIL, along with where to park your car.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, all additional information for your appointment will be sent through <strong>EMAIL ONLY</strong>, along with where to park your car.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Can I pay in full?</span><span class="faq-answer">No, you cannot pay in full upfront. You will only pay your deposit, and the remaining balance is paid after your service.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
             <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
             <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
@@ -1047,9 +1093,10 @@
         <div class="policy-grid">
           <div class="card">
             <div><span class="policy-tag">Deposits</span><span class="policy-tag">Non-refundable</span></div>
-            <h3>Deposit Policy</h3>
+            <h3>Deposit & Payment Policy</h3>
             <div class="policy-highlight">
               <p><strong>⚠️ ALL DEPOSITS ARE NON-REFUNDABLE AND NON-TRANSFERABLE.</strong> If you cancel your appointment for ANY reason, a <strong>NEW deposit is required</strong> to book another appointment.</p>
+              <p style="margin-top:0.8rem;"><strong>You cannot pay in full upfront.</strong> You will have to pay your $20 deposit, and the remaining balance is paid after your service. <strong>All additional information for your appointment will be sent through EMAIL ONLY.</strong></p>
             </div>
             <div class="warning-box">
               <span class="big-bold">🚨 NO REFUNDS 🚨</span>
@@ -1066,24 +1113,13 @@
             </div>
           </div>
 
+          <!-- 24-HOUR RESCHEDULE POLICY -->
           <div class="card">
             <div><span class="policy-tag">Rescheduling</span><span class="policy-tag">24-Hour Rule</span></div>
             <h3>24-Hour Reschedule Policy</h3>
             <p>You have <strong>24 hours</strong> to change your appointment time/date.</p>
             <div class="warning-box" style="margin-top:0.8rem;">
               <strong>⚠️ If you don't cancel within 24 hours, and you still want to change your appointment, you have to pay a Squeeze-in Fee.</strong>
-            </div>
-          </div>
-
-          <!-- NEW: DEPOSIT ONLY / EMAIL ONLY POLICY -->
-          <div class="card">
-            <div><span class="policy-tag">Payment</span><span class="policy-tag">Email Only</span></div>
-            <h3>Deposit Only — No Full Payment</h3>
-            <div class="policy-highlight">
-              <p><strong>⚠️ YOU CANNOT PAY IN FULL.</strong> Only the <strong>$20 deposit</strong> is paid upfront to secure your appointment. The remaining balance is paid in cash at your appointment.</p>
-            </div>
-            <div class="warning-box">
-              <strong>📧 ALL ADDITIONAL APPOINTMENT INFO IS SENT THROUGH EMAIL ONLY.</strong> Address, parking details, and any other appointment information will be sent to your email — not through text or DMs.
             </div>
           </div>
 
@@ -1107,7 +1143,7 @@
         </div>
         <div class="booking-card">
           <div class="booking-header"><span>📅</span><span>Book Direct Appointment</span></div>
-          <div class="booking-sub">Schedule instantly with my calendar. Pay only the $20 deposit — no full payment. All appointment details are sent via email ONLY.</div>
+          <div class="booking-sub">Schedule your nail appointment instantly using my calendar.</div>
           <div class="calendar-button-container">
             <div id="google-calendar-btn"></div>
             <a href="https://calendar.app.google/meNdHchW6ueV8aKn9" target="_blank" class="direct-booking-link" rel="noopener noreferrer">📆 Open Booking Link</a>
@@ -1126,7 +1162,7 @@
               }
             })();
           </script>
-          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — You cannot pay in full. Deposit is non-refundable & non-transferable and goes toward your final total. <strong>All additional appointment info is sent through email ONLY.</strong></div>
+          <div class="deposit-note"><strong>💎 $20 Deposit Required</strong> — Non-refundable & non-transferable. You cannot pay in full upfront; deposits go towards final total!</div>
           <div class="alt-booking">
             <div class="alt-title">✨ Or book via social media ✨</div>
             <div class="social-buttons">
