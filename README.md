@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -212,6 +213,21 @@
       background-clip: text;
       color: transparent;
       margin-left: 0.3rem;
+    }
+    
+    /* Unavailable Badge */
+    .unavailable-badge {
+      background: #ffeeba;
+      color: #856404;
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
     /* ---------- PRESS-ON SECTION STYLES ---------- */
@@ -920,7 +936,7 @@
         <div class="section-heading">
           <span class="kicker">Services &amp; pricing</span>
           <h2>Price list</h2>
-          <p>Deposits go toward total. Final balance accepted in cash.</p>
+          <p><span style="color: var(--purple-dark); font-weight: 700;">Accepted in cash.</span> Deposits go toward total. Final balance accepted in cash.</p>
         </div>
         <div class="services-grid">
           <div class="card">
@@ -942,6 +958,12 @@
 
           <div class="card">
             <h3>🦶 Pedicure Menu</h3>
+            
+            <!-- UNAVAILABLE NOTICE -->
+            <div class="unavailable-badge">
+              ⚠️ UNAVAILABLE UNTIL FURTHER NOTICE 🌟
+            </div>
+            
             <div class="price-item highlight-item"><span class="price-title">Classic Pedicure</span><span>$50</span></div>
             <div class="price-item highlight-item"><span class="price-title">Deluxe Pedicure</span><span>$65</span></div>
             <div class="price-item highlight-item"><span class="price-title">Luxury Pedicure</span><span>$75</span></div>
@@ -964,7 +986,6 @@
             <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
             <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
             <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
-            <!-- Soak off removed -->
           </div>
 
           <!-- BROW MENU -->
@@ -1081,6 +1102,7 @@
           <h3>💬 Frequently Asked Questions 💬</h3>
           <div class="faq-list">
             <div class="faq-item"><span class="faq-question">❓ Do you do travel appointments?</span><span class="faq-answer"><strong style="color:#dc3545;">NO. WE DO NOT DO TRAVEL APPTS DUE TO SAFETY REASONS.</strong></span></div>
+            <div class="faq-item"><span class="faq-question">❓ Are pedicures available?</span><span class="faq-answer">No, pedicures are currently <strong>UNAVAILABLE UNTIL FURTHER NOTICE</strong>.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book without paying a deposit?</span><span class="faq-answer">No, to be fair to other loyal clients, everyone should follow the policy.</span></div>
