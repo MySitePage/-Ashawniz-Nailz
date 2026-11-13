@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -202,7 +201,7 @@
       display: inline-block;
     }
 
-    /* ---------- COMING SOON BADGE (inline next to a price) ---------- */
+    /* ---------- COMING SOON BADGE ---------- */
     .coming-soon-badge {
       font-size: 0.7rem;
       font-weight: 800;
@@ -866,6 +865,13 @@
           <div class="eyebrow"><span class="eyebrow-dot"></span> SOUTH CAROLINA NAIL TECH</div>
           <h1>Nails done right. <span class="highlight">Every style. Every color. Every time.</span></h1>
           <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, custom designs, and press-ons for clients who want their nails to match their energy. Home-based salon in Florence, SC.</p>
+          
+          <!-- BOLD NO TRAVEL WARNING -->
+          <div class="warning-box" style="margin-bottom: 1.5rem; padding: 0.8rem; text-align: left; border-width: 3px;">
+            <span class="big-bold" style="display: block; text-align: center; margin-bottom: 0.3rem;">🚨 WE DO NOT DO TRAVEL APPTS 🚨</span>
+            <p style="font-size: 0.85rem; font-weight: 700; text-align: center; margin: 0; color: #b30000;">Due to safety reasons.</p>
+          </div>
+
           <div class="hero-badges">
             <div class="badge"><span class="badge-dot"></span> Registered Cosmetologist</div>
             <div class="badge"><span class="badge-dot"></span> Florence, SC Area</div>
@@ -957,11 +963,11 @@
             <div class="price-item"><span>Charm Fullsets (Toes)</span><span>$75</span></div>
             <div class="price-item"><span>Charm/Design Fullset (Toes)</span><span>$80</span></div>
             <div class="price-item"><span>Nail Repair</span><span>$10 each</span></div>
-            <div class="price-item"><span>Soak Off</span><span>$15</span></div>
             <div class="price-item"><span>Freestyle (Tech choice only)</span><span>$70</span></div>
+            <!-- Soak off removed -->
           </div>
 
-          <!-- BROW MENU: Wax & Tint available, Lamination Coming Soon -->
+          <!-- BROW MENU -->
           <div class="card">
             <h3>👁️ Brow Menu</h3>
             <div class="price-item highlight-item"><span class="price-title">Brow Wax</span><span>$15</span></div>
@@ -986,9 +992,7 @@
       </div>
     </section>
 
-    <!-- ============================================ -->
-    <!-- UPDATED PRESS-ONS SECTION                     -->
-    <!-- ============================================ -->
+    <!-- PRESS-ONS SECTION -->
     <section id="press-ons">
       <div class="container">
         <div class="section-heading">
@@ -1001,13 +1005,13 @@
           <h3>Ready to Shop Press-Ons?</h3>
           <p>Fill out our quick order form to get started. Nails and toes must be purchased together.</p>
           <div class="form-update-notice">
-            ⚠️ Order form updated: Now includes Bundle Options & $20 Deposit requirement!
+            ⚠️ Order form updated: Now includes Bundle Options, Deposit Info, & Pick-Up Times!
           </div><br>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Open Press-On Order Form</a>
         </div>
 
         <div class="press-on-info-grid">
-          <!-- NEW PRESS-ON BUNDLE PRICES -->
+          <!-- BUNDLE PRICES -->
           <div class="card">
             <h3>💅 Bundle Pricing</h3>
             <p style="font-size:0.8rem; margin-bottom:1rem;">Each bundle includes BOTH a press-on fingernail set and a press-on toenail set.</p>
@@ -1020,9 +1024,13 @@
             <div class="price-item" style="margin-top:0.8rem;"><span class="price-title">Signature Duo</span><span>$85 – $100</span></div>
             <div class="refill-note">Fully custom design</div>
             
-            <div class="warning-box" style="margin-top:1.5rem; margin-bottom:0;">
-              <strong>⚠️ Deposit Required</strong>
-              <p style="margin-top:0.3rem;">A <strong>$20 deposit</strong> is required to place an order. The deposit goes toward your total. Orders will not be started until the deposit is received.</p>
+            <div class="warning-box" style="margin-top:1.5rem; margin-bottom:0; text-align: left;">
+              <strong style="display:block; text-align:center; margin-bottom:0.5rem; font-size:1rem;">⚠️ Deposit & Payment Rules</strong>
+              <ul style="margin-left: 1.2rem; font-size: 0.8rem; line-height: 1.5;">
+                <li><strong>For Shipping:</strong> No deposit required. Must pay in FULL before shipping.</li>
+                <li><strong>For Pick-Up:</strong> A <strong>$20 deposit</strong> is required to place the order. Deposit goes toward the total.</li>
+                <li>Orders will not be started until the deposit (if pick-up) or full payment (if shipping) is received.</li>
+              </ul>
             </div>
           </div>
 
@@ -1033,7 +1041,13 @@
             <div class="price-item"><span class="price-title">Fast Shipping</span><span>$15</span></div>
             <div class="price-item"><span class="price-title">Local Pickup</span><span>Free</span></div>
             
-            <div class="service-notes" style="margin-top:1rem;">
+            <div class="policy-highlight" style="margin-top: 1rem; margin-bottom: 1rem;">
+              <p style="font-size: 0.85rem; font-weight: 700; color: #b30000; text-align: center;">
+                ⚠️ PICK-UP IS ONLY AVAILABLE FOR 2 DAYS ONLY FROM 12:00 PM – 4:00 PM ⚠️
+              </p>
+            </div>
+
+            <div class="service-notes">
               <p><strong>Please Note:</strong> Shipping fees are separate from bundle prices. Remaining balances must be paid before shipping or pickup.</p>
             </div>
           </div>
@@ -1054,7 +1068,6 @@
           </div>
         </div>
 
-        <!-- Press-On CTA again at the bottom of section -->
         <div style="text-align:center; margin-top:2rem;">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="press-on-cta">🛒 Shop Press-Ons Now</a>
         </div>
@@ -1067,11 +1080,12 @@
         <div class="faq-section">
           <h3>💬 Frequently Asked Questions 💬</h3>
           <div class="faq-list">
+            <div class="faq-item"><span class="faq-question">❓ Do you do travel appointments?</span><span class="faq-answer"><strong style="color:#dc3545;">NO. WE DO NOT DO TRAVEL APPTS DUE TO SAFETY REASONS.</strong></span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book without paying a deposit?</span><span class="faq-answer">No, to be fair to other loyal clients, everyone should follow the policy.</span></div>
             <div class="faq-item"><span class="faq-question">❓ When will I get the address?</span><span class="faq-answer">When a deposit is sent, all additional information for your appointment will be sent through <strong>EMAIL ONLY</strong>, along with where to park your car.</span></div>
-            <div class="faq-item"><span class="faq-question">❓ Can I pay in full?</span><span class="faq-answer">No, you cannot pay in full upfront. You will only pay your deposit, and the remaining balance is paid after your service.</span></div>
+            <div class="faq-item"><span class="faq-question">❓ Can I pay in full?</span><span class="faq-answer">No, you cannot pay in full upfront. You will only pay your deposit, and the remaining balance is paid after your service. (Exception: Press-ons for shipping must be paid in full).</span></div>
             <div class="faq-item"><span class="faq-question">❓ Do you charge for length?</span><span class="faq-answer">No, we don't charge for length!</span></div>
             <div class="faq-item"><span class="faq-question">❓ Does deposit go towards total?</span><span class="faq-answer">Yes! Deposits go towards your final total.</span></div>
             <div class="faq-item"><span class="faq-question">❓ What does Charm set include?</span><span class="faq-answer">Unlimited charms ONLY</span></div>
@@ -1091,6 +1105,14 @@
           <h2>Before you book</h2>
         </div>
         <div class="policy-grid">
+          <!-- BOLD NO TRAVEL WARNING IN POLICIES -->
+          <div class="card" style="grid-column: 1 / -1; margin-bottom: 0.5rem;">
+            <div class="warning-box" style="margin: 0; padding: 1rem; border-width: 3px;">
+              <span class="big-bold" style="font-size: 1.4rem; display: block; margin-bottom: 0.3rem;">🚨 WE DO NOT DO TRAVEL APPTS 🚨</span>
+              <p style="font-size: 1rem; font-weight: 700; color: #b30000; margin: 0;">Due to safety reasons.</p>
+            </div>
+          </div>
+
           <div class="card">
             <div><span class="policy-tag">Deposits</span><span class="policy-tag">Non-refundable</span></div>
             <h3>Deposit & Payment Policy</h3>
