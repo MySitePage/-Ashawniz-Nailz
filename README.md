@@ -157,11 +157,11 @@
       font-size: 1.2rem;
       font-weight: 800;
       text-transform: uppercase;
-      color: #dc3545;
+      color: var(--purple-dark);
     }
     .warning-box {
-      background: linear-gradient(135deg, rgba(255, 220, 220, 0.9), rgba(255, 200, 200, 0.9));
-      border: 2px solid #dc3545;
+      background: linear-gradient(135deg, rgba(243, 232, 255, 0.9), rgba(255, 228, 243, 0.9));
+      border: 2px solid var(--highlight-purple-border);
       padding: 0.8rem;
       border-radius: 20px;
       margin: 1rem 0;
@@ -882,12 +882,6 @@
           <h1>Nails done right. <span class="highlight">Every style. Every color. Every time.</span></h1>
           <p class="hero-subtitle">Registered cosmetologist creating acrylic sets, pedicures, custom designs, and press-ons for clients who want their nails to match their energy. Home-based salon in Florence, SC.</p>
           
-          <!-- BOLD NO TRAVEL WARNING -->
-          <div class="warning-box" style="margin-bottom: 1.5rem; padding: 0.8rem; text-align: left; border-width: 3px;">
-            <span class="big-bold" style="display: block; text-align: center; margin-bottom: 0.3rem;">🚨 WE DO NOT DO TRAVEL APPTS 🚨</span>
-            <p style="font-size: 0.85rem; font-weight: 700; text-align: center; margin: 0; color: #b30000;">Due to safety reasons.</p>
-          </div>
-
           <div class="hero-badges">
             <div class="badge"><span class="badge-dot"></span> Registered Cosmetologist</div>
             <div class="badge"><span class="badge-dot"></span> Florence, SC Area</div>
@@ -936,8 +930,14 @@
         <div class="section-heading">
           <span class="kicker">Services &amp; pricing</span>
           <h2>Price list</h2>
-          <!-- FIXED TEXT HERE -->
+          <!-- UPDATED TEXT & WARNING HERE -->
           <p>Deposits go toward total. Final balance <span style="color: var(--purple-dark); font-weight: 700;">accepted in cash</span>.</p>
+          
+          <div class="warning-box" style="max-width: 600px; margin: 1.5rem auto 0; padding: 0.8rem; text-align: left; border-width: 3px;">
+            <span class="big-bold" style="display: block; text-align: center; margin-bottom: 0.3rem;">🚨 WE DO NOT DO TRAVEL APPTS 🚨</span>
+            <p style="font-size: 0.85rem; font-weight: 700; text-align: center; margin: 0; color: var(--purple-dark);">Due to safety reasons.</p>
+          </div>
+          
         </div>
         <div class="services-grid">
           <div class="card">
@@ -1064,7 +1064,7 @@
             <div class="price-item"><span class="price-title">Local Pickup</span><span>Free</span></div>
             
             <div class="policy-highlight" style="margin-top: 1rem; margin-bottom: 1rem;">
-              <p style="font-size: 0.85rem; font-weight: 700; color: #b30000; text-align: center;">
+              <p style="font-size: 0.85rem; font-weight: 700; color: var(--purple-dark); text-align: center;">
                 ⚠️ PICK-UP IS ONLY AVAILABLE FOR 2 DAYS ONLY FROM 12:00 PM – 4:00 PM ⚠️
               </p>
             </div>
@@ -1102,7 +1102,7 @@
         <div class="faq-section">
           <h3>💬 Frequently Asked Questions 💬</h3>
           <div class="faq-list">
-            <div class="faq-item"><span class="faq-question">❓ Do you do travel appointments?</span><span class="faq-answer"><strong style="color:#dc3545;">NO. WE DO NOT DO TRAVEL APPTS DUE TO SAFETY REASONS.</strong></span></div>
+            <div class="faq-item"><span class="faq-question">❓ Do you do travel appointments?</span><span class="faq-answer"><strong style="color:var(--purple-dark);">NO. WE DO NOT DO TRAVEL APPTS DUE TO SAFETY REASONS.</strong></span></div>
             <div class="faq-item"><span class="faq-question">❓ Are pedicures available?</span><span class="faq-answer">No, pedicures are currently <strong>UNAVAILABLE UNTIL FURTHER NOTICE</strong>.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Can I book multiple appts at one time?</span><span class="faq-answer">Unfortunately, no. I would love everyone to have their own appt time/date.</span></div>
             <div class="faq-item"><span class="faq-question">❓ Where are you located?</span><span class="faq-answer">We are a home-based salon in Florence, SC.</span></div>
@@ -1132,7 +1132,7 @@
           <div class="card" style="grid-column: 1 / -1; margin-bottom: 0.5rem;">
             <div class="warning-box" style="margin: 0; padding: 1rem; border-width: 3px;">
               <span class="big-bold" style="font-size: 1.4rem; display: block; margin-bottom: 0.3rem;">🚨 WE DO NOT DO TRAVEL APPTS 🚨</span>
-              <p style="font-size: 1rem; font-weight: 700; color: #b30000; margin: 0;">Due to safety reasons.</p>
+              <p style="font-size: 1rem; font-weight: 700; color: var(--purple-dark); margin: 0;">Due to safety reasons.</p>
             </div>
           </div>
 
