@@ -936,6 +936,7 @@
         <div class="section-heading">
           <span class="kicker">Services &amp; pricing</span>
           <h2>Price list</h2>
+          <!-- FIXED TEXT HERE -->
           <p><span style="color: var(--purple-dark); font-weight: 700;">Accepted in cash.</span> Deposits go toward total. Final balance accepted in cash.</p>
         </div>
         <div class="services-grid">
