@@ -8,7 +8,7 @@
   <meta property="og:title" content="Ashawniz Nailz | Book Your Appointment" />
   <meta property="og:description" content="Professional nail tech in South Carolina. Acrylic sets, pedicures, custom designs, press-ons. Book online!" />
   <meta property="og:type" content="website" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Pacifico&display=swap" rel="stylesheet" />
   <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
   <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
   <style>
@@ -77,7 +77,7 @@
     }
 
     /* ---------- GLOBAL BUTTONS ---------- */
-    .btn-primary, .btn-secondary {
+    .btn-primary, .btn-secondary, .btn-press-on {
       border-radius: var(--radius-pill);
       padding: 0.8rem 1.6rem;
       font-size: 0.8rem;
@@ -92,6 +92,7 @@
       cursor: pointer;
       border: none;
       line-height: 1.2;
+      text-align: center;
     }
     .btn-primary {
       background: linear-gradient(135deg, #ffb3e6, #d9b3ff);
@@ -569,9 +570,22 @@
       align-items: center;
       gap: 0.3rem;
     }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 1.2rem; }
+    .hero-actions { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 0.8rem; 
+      margin-bottom: 1.2rem; 
+    }
+    
+    /* Adjusted button width for mobile to prevent overflow */
+    .hero-actions .btn-primary,
+    .hero-actions .btn-secondary,
+    .hero-actions .btn-press-on {
+      flex: 1 1 auto;
+      width: auto;
+    }
     @media (max-width: 550px) {
-      .btn-primary, .btn-secondary { padding: 0.65rem 1.2rem; font-size: 0.7rem; }
+      .btn-primary, .btn-secondary, .btn-press-on { padding: 0.65rem 1.2rem; font-size: 0.7rem; }
     }
     .hero-meta { font-size: 0.72rem; opacity: 0.85; }
 
@@ -727,7 +741,7 @@
         gap: 1rem;
       }
 
-      .btn-primary, .btn-secondary {
+      .btn-primary, .btn-secondary, .btn-press-on {
         padding: 0.95rem 1.9rem;
         font-size: 0.85rem;
       }
@@ -892,10 +906,14 @@
             <a class="btn-press-on" href="https://docs.google.com/forms/d/e/1FAIpQLSdjID0TQsOCIt0rGLtiYauvxqCONnjZfuOAOCgVOK-4VvCfwQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer"><span>💌</span><span>Shop Press-Ons</span></a>
           </div>
         </div>
+        
+        <!-- UPDATED READY TO BOOK CARD -->
         <div class="card" style="text-align:center; padding:2rem 1.5rem;">
           <div style="font-size:2.5rem; margin-bottom:0.5rem;">💅🏾</div>
           <h3 style="margin-bottom:0.8rem;">Ready to Book?</h3>
-          <p style="font-size:0.85rem; color:var(--text-light); margin-bottom:1.2rem;">Scroll down to the bottom of the page to read all policies and pricing, then book your appointment.</p>
+          <p style="font-size: 0.95rem; font-weight: 800; color: var(--purple-dark); line-height: 1.5; margin-bottom:1.2rem; text-transform: uppercase;">
+            PLEASE READ ALL POLICIES AND PRICING BEFORE BOOKING YOUR APPOINTMENT BELOW.
+          </p>
           <a href="#booking" class="btn-primary" style="width:100%; max-width:250px; margin:0 auto;">📆 Go to Booking</a>
         </div>
       </div>
@@ -930,7 +948,6 @@
         <div class="section-heading">
           <span class="kicker">Services &amp; pricing</span>
           <h2>Price list</h2>
-          <!-- UPDATED TEXT & WARNING HERE -->
           <p>Deposits go toward total. Final balance <span style="color: var(--purple-dark); font-weight: 700;">accepted in cash</span>.</p>
           
           <div class="warning-box" style="max-width: 600px; margin: 1.5rem auto 0; padding: 0.8rem; text-align: left; border-width: 3px;">
@@ -977,7 +994,7 @@
             <div class="price-item"><span class="price-title">Deposit</span><span>$20</span></div>
             <div class="price-item"><span class="price-title">Acrylic (Toes) Refill</span><span>$30</span></div>
             <div class="refill-note">⚠️ Must have at least 5 toes still on for toe refill</div>
-            <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$45</span></div>
+            <div class="price-item highlight-item"><span class="price-title">Acrylic Refill (nails)</span><span>$60</span></div>
             <div class="price-item highlight-item"><span class="price-title">Gel toes (no acrylic)</span><span>$35</span></div>
             <div class="refill-note">⚠️ Must have at least 4 nails on for nail refill</div>
             <div class="price-item"><span>2 Acrylic Toes</span><span>$55</span></div>
